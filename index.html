@@ -205,6 +205,64 @@
     </section>
 
     <!-- Footer -->
+    <!-- Форма заявки (Devis) -->
+    <section id="devis" class="py-20 bg-brand-dark border-t border-gray-800">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="font-heading text-3xl font-bold text-white mb-4">Demander un Devis Gratuit</h3>
+                <p class="text-gray-400">Décrivez votre besoin, je vous recontacte sous 24h.</p>
+            </div>
+            
+            <div class="bg-brand-light p-8 md:p-10 rounded-xl border border-gray-800 shadow-2xl">
+                <!-- Вставьте вашу ссылку от Formspree в action="" -->
+                <form action="ВАША_ССЫЛКА_ОТ_FORMSPREE" method="POST" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Имя -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Nom & Prénom</label>
+                            <input type="text" name="Nom" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors">
+                        </div>
+                        <!-- Телефон -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Téléphone</label>
+                            <input type="tel" name="Telephone" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Адрес -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Adresse d'intervention (Ville ou Code Postal)</label>
+                        <input type="text" name="Adresse" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors">
+                    </div>
+
+                    <!-- Выпадающий список (Тип работ) -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Type de travaux</label>
+                        <select name="Type_de_travaux" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors appearance-none">
+                            <option value="" disabled selected>-- Sélectionnez un type d'intervention --</option>
+                            <option value="Montage de meubles">Montage de meubles / Fixations</option>
+                            <option value="Plomberie">Petite Plomberie (fuite, robinet, siphon)</option>
+                            <option value="Électricité">Électricité (prises, luminaires)</option>
+                            <option value="Autre / Rénovation">Autre travaux / Rénovation</option>
+                        </select>
+                    </div>
+
+                    <!-- Описание -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Description des travaux</label>
+                        <textarea name="Description" rows="4" required placeholder="Ex: Montage d'une armoire IKEA PAX et changement du robinet de la cuisine..." class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors resize-none"></textarea>
+                    </div>
+
+                    <!-- Кнопка отправки -->
+                    <button type="submit" class="w-full bg-brand-accent hover:bg-yellow-500 text-brand-dark font-heading font-bold text-lg py-4 rounded-lg transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Envoyer la demande
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
     <footer id="contact" class="bg-brand-dark border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h3 class="font-heading text-2xl font-bold text-white mb-8">Besoin d'une intervention rapide ?</h3>
