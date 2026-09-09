@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsoRénov' | Votre Homme à Tout Faire en Île-de-France</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#111827',
+                            light: '#1F2937',
+                            accent: '#F59E0B', 
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-gray-300 font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Навигация -->
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-accent rounded-sm flex items-center justify-center text-brand-dark text-xl">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-heading font-bold text-white text-xl tracking-wide uppercase">IsoRénov'</h1>
+                        <p class="text-brand-accent text-xs font-semibold tracking-widest uppercase">Homme à Tout Faire</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-sm font-semibold hover:text-brand-accent transition-colors">Services</a>
+                    <a href="#tarifs" class="text-sm font-semibold hover:text-brand-accent transition-colors">Tarifs</a>
+                    <a href="#contact" class="text-sm font-semibold hover:text-brand-accent transition-colors">Contact</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="tel:0766997054" class="font-heading font-bold text-white hover:text-brand-accent transition-colors"><i class="fas fa-phone mr-2 text-brand-accent"></i>07 66 99 70 54</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран (Hero) -->
+    <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-15"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-semibold mb-6 border border-brand-accent/20">Île-de-France & Clamart</span>
+            <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+                Votre Partenaire de Confiance pour le <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300">Petit Bricolage du Quotidien</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Un meuble à monter ? Une fuite sous l'évier ? Une étagère à fixer ? Confiez vos petits travaux à un professionnel minutieux. Interventions rapides et soignées chez vous.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/33766997054" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-heading font-bold py-4 px-8 rounded-md transition-all shadow-lg shadow-green-900/20 flex items-center justify-center gap-3 text-lg">
+                    <i class="fab fa-whatsapp text-2xl"></i> Demander un devis
+                </a>
+                <a href="tel:0766997054" class="bg-brand-light hover:bg-gray-700 text-white border border-gray-600 font-heading font-bold py-4 px-8 rounded-md transition-all flex items-center justify-center gap-3 text-lg">
+                    <i class="fas fa-phone text-brand-accent"></i> Appeler
+                </a>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-400">
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-check-circle text-brand-accent"></i> Tarifs Transparents</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-check-circle text-brand-accent"></i> Soirs & Week-ends</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-check-circle text-brand-accent"></i> Éligible Crédit d'Impôt*</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 bg-brand-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Mes Services du Quotidien</h3>
+                <div class="w-20 h-1 bg-brand-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Карточка 1 -->
+                <div class="bg-brand-light p-8 rounded-xl border border-gray-800 hover:border-brand-accent/50 transition-colors group">
+                    <div class="w-14 h-14 bg-brand-dark rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-couch text-2xl text-brand-accent"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold text-white mb-3">Montage & Fixation</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Assemblage de meubles en kit (IKEA, But, Conforama), pose d'étagères, tringles à rideaux, cadres et fixations murales solides.</p>
+                </div>
+                
+                <!-- Карточка 2 -->
+                <div class="bg-brand-light p-8 rounded-xl border border-gray-800 hover:border-brand-accent/50 transition-colors group">
+                    <div class="w-14 h-14 bg-brand-dark rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-wrench text-2xl text-brand-accent"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold text-white mb-3">Petite Plomberie</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Changement de joints, remplacement de siphons, robinets ou pommeaux de douche, réparation de petites fuites sans gros travaux.</p>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="bg-brand-light p-8 rounded-xl border border-gray-800 hover:border-brand-accent/50 transition-colors group">
+                    <div class="w-14 h-14 bg-brand-dark rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-lightbulb text-2xl text-brand-accent"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold text-white mb-3">Petit Dépannage Électrique</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Remplacement d'ampoules difficiles d'accès, changement de prises ou d'interrupteurs défectueux, installation d'appliques et luminaires.</p>
+                </div>
+            </div>
+            
+            <!-- Блок для более объемных работ -->
+            <div class="mt-12 bg-gray-900 border border-gray-700 rounded-lg p-6 text-center">
+                <p class="text-gray-400 text-sm">
+                    <span class="text-brand-accent font-semibold"><i class="fas fa-info-circle mr-1"></i> Besoin de plus ?</span> Pour des travaux plus conséquents (rénovation, pose de sols, etc.), n'hésitez pas à me contacter pour discuter de votre projet et obtenir un devis adapté.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цены -->
+    <section id="tarifs" class="py-20 bg-brand-dark/50 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="font-heading text-3xl font-bold text-white mb-4">Grille Tarifaire Indicative</h3>
+                <p class="text-gray-400">Des prix justes, sans mauvaises surprises.</p>
+            </div>
+            
+            <div class="bg-brand-light rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+                <!-- Таблица -->
+                <div class="divide-y divide-gray-800">
+                    <div class="flex justify-between items-center p-6 hover:bg-gray-800/50 transition-colors">
+                        <div class="flex items-center gap-4"><i class="fas fa-chair text-gray-500"></i><span class="font-medium text-white">Petit meuble (chaise, table basse)</span></div>
+                        <span class="font-heading font-bold text-brand-accent">30–40 €</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-gray-800/50 transition-colors">
+                        <div class="flex items-center gap-4"><i class="fas fa-bed text-gray-500"></i><span class="font-medium text-white">Meuble moyen & Armoire</span></div>
+                        <span class="font-heading font-bold text-brand-accent">40–80 €</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-gray-800/50 transition-colors">
+                        <div class="flex items-center gap-4"><i class="fas fa-shower text-gray-500"></i><span class="font-medium text-white">Petite plomberie (robinet, siphon)</span></div>
+                        <span class="font-heading font-bold text-brand-accent">40–80 €</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-gray-800/50 transition-colors">
+                        <div class="flex items-center gap-4"><i class="fas fa-plug text-gray-500"></i><span class="font-medium text-white">Prises & Luminaires</span></div>
+                        <span class="font-heading font-bold text-brand-accent">40–70 €</span>
+                    </div>
+                </div>
+                <div class="bg-gray-900/50 p-6 text-xs text-gray-500 border-t border-gray-800 text-center">
+                    * Conformément à la réglementation des services à la personne, les prestations de petit bricolage ne dépassent pas 2h consécutives. Pour des travaux plus longs, un devis spécifique est établi.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-dark border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="font-heading text-2xl font-bold text-white mb-8">Besoin d'une intervention rapide ?</h3>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <a href="mailto:isotron44@gmail.com" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center"><i class="fas fa-envelope text-brand-accent"></i></div>
+                    isotron44@gmail.com
+                </a>
+                <a href="tel:0766997054" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center"><i class="fas fa-phone text-brand-accent"></i></div>
+                    07 66 99 70 54
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8 mt-8 text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 IsoRénov'. Tous droits réservés.</p>
+                <p>Basé à Clamart • Intervient dans toute l'Île-de-France</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
