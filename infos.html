@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infos Pratiques & Tarifs | K Bricolage Pro</title>
+    
+    <meta name="description" content="Découvrez nos tarifs de petit bricolage, les avis de nos clients et nos mentions légales. Transparence et professionnalisme garantis.">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Montserrat', 'sans-serif'] },
+                    colors: { brand: { dark: '#111827', light: '#1F2937', accent: '#F59E0B' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-gray-300 font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Навигация (Возврат на главную) -->
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="text-gray-400 hover:text-brand-accent transition-colors flex items-center gap-2 font-semibold">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+                <div class="hidden md:block">
+                    <h1 class="font-heading font-bold text-white text-xl tracking-wide uppercase">K Bricolage Pro</h1>
+                </div>
+                <div>
+                    <a href="tel:0766997054" class="font-heading font-bold text-white hover:text-brand-accent transition-colors"><i class="fas fa-phone mr-2 text-brand-accent"></i>07 66 99 70 54</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <section class="pt-32 pb-12 px-4 bg-brand-dark text-center border-b border-gray-800">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up">
+            <h1 class="font-heading text-4xl md:text-5xl font-extrabold text-white mb-6">Informations & <span class="text-brand-accent">Transparence</span></h1>
+            <p class="text-lg text-gray-400">Tarifs clairs, retours d'expérience et informations légales. Chez K Bricolage Pro, nous travaillons en toute confiance.</p>
+        </div>
+    </section>
+
+    <!-- Блок 1: Цены (Tarifs) -->
+    <section class="py-20 bg-brand-light">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="font-heading text-3xl font-bold text-white mb-4">Grille Tarifaire (À titre indicatif)</h2>
+                <p class="text-gray-400">Un devis exact sera établi avant toute intervention.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-dark p-8 rounded-xl border border-gray-700 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-heading font-bold text-white mb-2">Déplacement</h3>
+                    <p class="text-gray-400 text-sm mb-6">Clamart et villes limitrophes</p>
+                    <div class="text-4xl font-extrabold text-brand-accent mb-4">40€</div>
+                </div>
+                
+                <div class="bg-brand-dark p-8 rounded-xl border-2 border-brand-accent text-center relative shadow-2xl transform md:-translate-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-accent text-brand-dark font-bold px-4 py-1 rounded-full text-sm">Le plus courant</div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-2">Taux Horaire</h3>
+                    <p class="text-gray-400 text-sm mb-6">Pour les petites interventions</p>
+                    <div class="text-4xl font-extrabold text-brand-accent mb-4">50€<span class="text-lg text-gray-400 font-normal">/h</span></div>
+                </div>
+                
+                <div class="bg-brand-dark p-8 rounded-xl border border-gray-700 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-heading font-bold text-white mb-2">Forfait Demi-journée</h3>
+                    <p class="text-gray-400 text-sm mb-6">Jusqu'à 4 heures de travail</p>
+                    <div class="text-4xl font-extrabold text-brand-accent mb-4">180€</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 2: Интерактивный слайдер До/После -->
+    <section class="py-20 bg-brand-dark border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-heading text-3xl font-bold text-white mb-4" data-aos="fade-up">Avant / Après</h2>
+            <p class="text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">Glissez le curseur pour voir la transformation.</p>
+            
+            <div class="relative w-full h-64 md:h-96 rounded-xl overflow-hidden group shadow-2xl border border-gray-700" data-aos="zoom-in">
+                <!-- Картинка "После" (Фон) -->
+                <div class="absolute inset-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center"></div>
+                
+                <!-- Картинка "До" (Обрезается ползунком) -->
+                <div id="before-slider" class="absolute inset-0 w-1/2 h-full bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center border-r-4 border-brand-accent shadow-[4px_0_15px_rgba(0,0,0,0.5)]"></div>
+                
+                <!-- Невидимый ползунок для управления -->
+                <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-10" oninput="document.getElementById('before-slider').style.width = this.value + '%'">
+                
+                <!-- Метки -->
+                <span class="absolute bottom-4 left-4 bg-black/70 px-3 py-1 text-white text-xs font-bold rounded tracking-widest pointer-events-none">AVANT</span>
+                <span class="absolute bottom-4 right-4 bg-brand-accent text-brand-dark px-3 py-1 text-xs font-bold rounded tracking-widest pointer-events-none">APRÈS</span>
+                
+                <!-- Инструкция -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black/50 px-4 py-2 rounded-full text-sm font-bold pointer-events-none animate-pulse flex items-center gap-2">
+                    <i class="fas fa-arrows-alt-h"></i> Glisser
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 3: Отзывы -->
+    <section class="py-20 bg-brand-light border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-3xl font-bold text-white mb-12 text-center" data-aos="fade-up">Ils m'ont fait confiance</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Отзыв 1 -->
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-brand-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">"Intervention très rapide pour une fuite sous mon évier. Le travail est propre et le tarif était clair dès le départ. Je recommande sans hésiter."</p>
+                    <div class="text-white font-bold text-sm">— Jean D., Clamart</div>
+                </div>
+                
+                <!-- Отзыв 2 -->
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-brand-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">"J'avais besoin d'aide pour monter une grande armoire PAX. Montage parfait, artisan ponctuel et très outillé. Merci !"</p>
+                    <div class="text-white font-bold text-sm">— Sophie L., Meudon</div>
+                </div>
+                
+                <!-- Отзыв 3 -->
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-700" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex text-brand-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">"Changement de plusieurs prises électriques et installation d'un lustre. Très professionnel et de bon conseil."</p>
+                    <div class="text-white font-bold text-sm">— Marc T., Issy-les-Moulineaux</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 4: Mentions Légales (Юридическая информация) -->
+    <section class="py-16 bg-brand-dark border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-heading text-2xl font-bold text-white mb-8">Mentions Légales</h2>
+            <div class="text-gray-400 text-sm space-y-4 max-w-2xl mx-auto">
+                <p><strong>Éditeur du site :</strong><br> M. Karen Vardanyan (K Bricolage Pro)</p>
+                <p><strong>Adresse :</strong><br> Clamart, Île-de-France, France</p>
+                <p><strong>Contact :</strong><br> Téléphone : 07 66 99 70 54 <br> Email : isotron44@gmail.com</p>
+                <p><strong>Statut :</strong><br> Auto-entreprise / Artisan</p>
+                <p><strong>Numéro SIRET :</strong><br> [À remplir prochainement]</p>
+                <p><strong>Hébergement :</strong><br> GitHub Pages (GitHub Inc.)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Плавающая кнопка WhatsApp -->
+    <a href="https://wa.me/33766997054" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Скрипт для анимаций -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800, offset: 50 });
+    </script>
+</body>
+</html>

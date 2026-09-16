@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K Bricolage Pro | Petit Bricolage en Île-de-France</title>
+    
+    <!-- SEO Основные теги -->
+    <meta name="description" content="K Bricolage Pro, votre expert en petit bricolage à Clamart. Interventions rapides, montage de meubles, petite plomberie et électricité mineure.">
+    <meta name="keywords" content="petit bricolage Clamart, homme à tout faire 92, montage meuble, petite réparation, K Bricolage Pro">
+    
+    <!-- Подключение библиотеки анимаций (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Montserrat', 'sans-serif'] },
+                    colors: { brand: { dark: '#111827', light: '#1F2937', accent: '#F59E0B' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-gray-300 font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Плавающая кнопка WhatsApp -->
+    <a href="https://wa.me/33766997054" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl transition-transform hover:scale-110 animate-[bounce_2s_infinite]">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Навигация -->
+    <nav class="fixed w-full z-40 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-accent rounded-sm flex items-center justify-center text-brand-dark text-xl">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-heading font-bold text-white text-xl tracking-wide uppercase">K Bricolage Pro</h1>
+                        <p class="text-brand-accent text-[10px] font-semibold tracking-widest uppercase">Petit Bricolage</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-sm font-semibold hover:text-brand-accent transition-colors">Services</a>
+                    <a href="infos.html" class="text-sm font-semibold hover:text-brand-accent transition-colors">Infos & Tarifs</a>
+                    <a href="#devis" class="text-sm font-semibold hover:text-brand-accent transition-colors">Devis Rapide</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="tel:0766997054" class="font-heading font-bold text-white hover:text-brand-accent transition-colors"><i class="fas fa-phone mr-2 text-brand-accent"></i>07 66 99 70 54</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-15"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-semibold mb-6 border border-brand-accent/20">Clamart & Île-de-France</span>
+            <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+                L'Expertise au Service de votre <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300">Quotidien</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl mx-auto">
+                Dépannage, montage et petites réparations. Des interventions rapides (2h maximum) dans le strict respect des normes du petit bricolage.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+                <a href="#devis" class="bg-brand-accent hover:bg-yellow-500 text-brand-dark font-heading font-bold py-4 px-8 rounded-md transition-all text-lg shadow-lg">
+                    Réserver une intervention
+                </a>
+                <a href="infos.html" class="border border-gray-400 hover:border-white text-gray-300 hover:text-white font-heading font-bold py-4 px-8 rounded-md transition-all text-lg flex items-center justify-center">
+                    Voir les tarifs & avis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Легальных Услуг -->
+    <section id="services" class="py-20 bg-brand-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="font-heading text-3xl font-bold text-white mb-4" data-aos="fade-up">Petit Bricolage & Dépannage</h3>
+            <p class="text-gray-500 text-sm mb-12" data-aos="fade-up" data-aos-delay="100">* Prestations limitées à 2 heures, sans modification de structure.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-light p-8 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-couch text-4xl text-brand-accent mb-4"></i>
+                    <h4 class="font-heading text-xl font-bold text-white mb-3">Montage & Fixation</h4>
+                    <p class="text-gray-400 text-sm">Assemblage de meubles en kit (IKEA, etc.), pose d'étagères, cadres et tringles à rideaux.</p>
+                </div>
+                <div class="bg-brand-light p-8 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-wrench text-4xl text-brand-accent mb-4"></i>
+                    <h4 class="font-heading text-xl font-bold text-white mb-3">Petite Plomberie</h4>
+                    <p class="text-gray-400 text-sm">Remplacement de joints, changement de siphons ou de flexibles de douche, réparation de fuites mineures.</p>
+                </div>
+                <div class="bg-brand-light p-8 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-bolt text-4xl text-brand-accent mb-4"></i>
+                    <h4 class="font-heading text-xl font-bold text-white mb-3">Électricité Mineure</h4>
+                    <p class="text-gray-400 text-sm">Remplacement d'ampoules, changement de prises ou d'interrupteurs existants, pose de lustres.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Магнит (Переход на скрытую страницу) -->
+    <section class="py-16 bg-gradient-to-r from-brand-dark via-gray-900 to-brand-dark border-t border-b border-brand-accent/20">
+        <div class="max-w-5xl mx-auto px-4 text-center" data-aos="zoom-in">
+            <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Un projet plus ambitieux ?</h3>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Aménagement sur mesure, rénovation esthétique, finitions haut de gamme... Découvrez mon savoir-faire technique pour vos projets d'envergure.
+            </p>
+            <a href="vip.html" class="inline-flex items-center gap-3 border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-brand-dark font-heading font-bold py-3 px-8 rounded-md transition-all">
+                Découvrir mes Réalisations Premium <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Форма Formspree -->
+    <section id="devis" class="py-20 bg-brand-dark border-t border-gray-800">
+        <div class="max-w-3xl mx-auto px-4" data-aos="fade-up">
+            <h3 class="font-heading text-3xl font-bold text-white mb-8 text-center">Devis Rapide & Gratuit</h3>
+            <div class="bg-brand-light p-8 rounded-xl border border-gray-800 shadow-2xl">
+                <form action="https://formspree.io/f/xljeawwg" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">Nom & Prénom</label>
+                            <input type="text" name="Nom" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">Téléphone</label>
+                            <input type="tel" name="Telephone" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">Code Postal / Ville</label>
+                        <input type="text" name="Adresse" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">Description des travaux</label>
+                        <textarea name="Description" rows="4" placeholder="Ex: J'ai besoin de monter une commode IKEA..." required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-accent text-brand-dark font-bold text-lg py-4 rounded-lg hover:bg-yellow-500 transition-colors shadow-lg">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер с добавленными ссылками -->
+    <footer class="bg-brand-dark border-t border-gray-800 pt-12 pb-8 text-center">
+        <p class="text-gray-400 mb-4 font-heading font-bold">📞 07 66 99 70 54 | ✉️ isotron44@gmail.com</p>
+        
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="infos.html" class="text-sm text-gray-500 hover:text-brand-accent transition-colors">Tarifs & Avis</a>
+            <a href="infos.html" class="text-sm text-gray-500 hover:text-brand-accent transition-colors">Mentions Légales</a>
+        </div>
+        
+        <p class="text-sm text-gray-600">&copy; 2026 K Bricolage Pro. Basé à Clamart, Île-de-France.</p>
+    </footer>
+
+    <!-- Скрипт для запуска анимаций -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
