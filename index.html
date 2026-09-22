@@ -1,177 +1,177 @@
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K Bricolage Pro | Petit Bricolage en Île-de-France</title>
-    
-    <!-- SEO Основные теги -->
-    <meta name="description" content="K Bricolage Pro, votre expert en petit bricolage à Clamart. Interventions rapides, montage de meubles, petite plomberie et électricité mineure.">
-    <meta name="keywords" content="petit bricolage Clamart, homme à tout faire 92, montage meuble, petite réparation, K Bricolage Pro">
-    
-    <!-- Подключение библиотеки анимаций (AOS) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Montserrat', 'sans-serif'] },
-                    colors: { brand: { dark: '#111827', light: '#1F2937', accent: '#F59E0B' } }
-                }
-            }
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>K-Rénov — Petits travaux et finitions à Clamart</title>
+  <meta name="description" content="Petit bricolage, installations et finitions intérieures à Clamart et dans le sud-ouest parisien. Intervention soignée, tarifs clairs.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pricing.css">
+  <link rel="stylesheet" href="portfolio.css">
 </head>
-<body class="bg-brand-dark text-gray-300 font-sans antialiased selection:bg-brand-accent selection:text-white">
-
-    <!-- Плавающая кнопка WhatsApp -->
-    <a href="https://wa.me/33766997054" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl transition-transform hover:scale-110 animate-[bounce_2s_infinite]">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Навигация -->
-    <nav class="fixed w-full z-40 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <div class="w-10 h-10 bg-brand-accent rounded-sm flex items-center justify-center text-brand-dark text-xl">
-                        <i class="fas fa-toolbox"></i>
-                    </div>
-                    <div>
-                        <h1 class="font-heading font-bold text-white text-xl tracking-wide uppercase">K Bricolage Pro</h1>
-                        <p class="text-brand-accent text-[10px] font-semibold tracking-widest uppercase">Petit Bricolage</p>
-                    </div>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-sm font-semibold hover:text-brand-accent transition-colors">Services</a>
-                    <a href="infos.html" class="text-sm font-semibold hover:text-brand-accent transition-colors">Infos & Tarifs</a>
-                    <a href="#devis" class="text-sm font-semibold hover:text-brand-accent transition-colors">Devis Rapide</a>
-                </div>
-                <div class="hidden md:flex">
-                    <a href="tel:0766997054" class="font-heading font-bold text-white hover:text-brand-accent transition-colors"><i class="fas fa-phone mr-2 text-brand-accent"></i>07 66 99 70 54</a>
-                </div>
-            </div>
-        </div>
+<body>
+  <div class="topbar">Clamart • Hauts-de-Seine • Sud & Ouest parisien</div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="brand-mark">K</span><span>K-Rénov<small>Homme à tout faire</small></span></a>
+      <button class="mobile-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+      <div class="menu" id="main-menu">
+        <a href="#services">Petits travaux</a>
+        <a href="prestations.html">Finitions & projets</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="#zone">Zone</a>
+        <a href="#tarifs">Tarifs</a>
+        <a class="btn" href="#contact">Demander un devis</a>
+      </div>
     </nav>
-
-    <!-- Главный экран -->
-    <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-15"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent"></div>
-        
-        <div class="max-w-4xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-semibold mb-6 border border-brand-accent/20">Clamart & Île-de-France</span>
-            <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-                L'Expertise au Service de votre <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300">Quotidien</span>
-            </h2>
-            <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl mx-auto">
-                Dépannage, montage et petites réparations. Des interventions rapides (2h maximum) dans le strict respect des normes du petit bricolage.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-                <a href="#devis" class="bg-brand-accent hover:bg-yellow-500 text-brand-dark font-heading font-bold py-4 px-8 rounded-md transition-all text-lg shadow-lg">
-                    Réserver une intervention
-                </a>
-                <a href="infos.html" class="border border-gray-400 hover:border-white text-gray-300 hover:text-white font-heading font-bold py-4 px-8 rounded-md transition-all text-lg flex items-center justify-center">
-                    Voir les tarifs & avis
-                </a>
-            </div>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="assets/hero.png" alt="Illustration : artisan de dos ajustant un meuble de cuisine dans un appartement parisien" fetchpriority="high">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Intervention locale & soignée</span>
+          <h1>Les petits travaux, enfin bien faits.</h1>
+          <p class="lead">Montage, fixation, installation et réparations simples à Clamart et autour. Une réponse claire, un créneau convenu, un travail propre.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Décrire mon besoin →</a>
+            <a class="btn secondary" href="realisations.html">Voir mes réalisations</a>
+          </div>
+          <div class="trust"><span>Prix annoncé</span><span>Travail propre</span><span>Interlocuteur unique</span></div>
         </div>
+      </div>
     </section>
 
-    <!-- Секция Легальных Услуг -->
-    <section id="services" class="py-20 bg-brand-dark border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h3 class="font-heading text-3xl font-bold text-white mb-4" data-aos="fade-up">Petit Bricolage & Dépannage</h3>
-            <p class="text-gray-500 text-sm mb-12" data-aos="fade-up" data-aos-delay="100">* Prestations limitées à 2 heures, sans modification de structure.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-light p-8 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-couch text-4xl text-brand-accent mb-4"></i>
-                    <h4 class="font-heading text-xl font-bold text-white mb-3">Montage & Fixation</h4>
-                    <p class="text-gray-400 text-sm">Assemblage de meubles en kit (IKEA, etc.), pose d'étagères, cadres et tringles à rideaux.</p>
-                </div>
-                <div class="bg-brand-light p-8 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-wrench text-4xl text-brand-accent mb-4"></i>
-                    <h4 class="font-heading text-xl font-bold text-white mb-3">Petite Plomberie</h4>
-                    <p class="text-gray-400 text-sm">Remplacement de joints, changement de siphons ou de flexibles de douche, réparation de fuites mineures.</p>
-                </div>
-                <div class="bg-brand-light p-8 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-bolt text-4xl text-brand-accent mb-4"></i>
-                    <h4 class="font-heading text-xl font-bold text-white mb-3">Électricité Mineure</h4>
-                    <p class="text-gray-400 text-sm">Remplacement d'ampoules, changement de prises ou d'interrupteurs existants, pose de lustres.</p>
-                </div>
-            </div>
+    <section class="section white" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Petit bricolage</span><h2>Une seule personne.<br>Plusieurs petits besoins.</h2></div>
+          <p>Idéal pour regrouper les tâches qui s'accumulent à la maison, avec une intervention organisée et sans mauvaise surprise.</p>
         </div>
+        <div class="grid">
+          <article class="card reveal"><span class="icon">⌂</span><h3>Fixer & installer</h3><p>Étagères, tringles, cadres, miroirs, accessoires, supports et petits équipements.</p></article>
+          <article class="card reveal"><span class="icon">◇</span><h3>Monter & ajuster</h3><p>Meubles en kit, poignées, portes de meuble, réglages et petites adaptations.</p></article>
+          <article class="card reveal"><span class="icon">↻</span><h3>Entretenir & réparer</h3><p>Joints, retouches, remplacement d'éléments simples et petites réparations courantes.</p></article>
+        </div>
+      </div>
     </section>
 
-    <!-- VIP Магнит (Переход на скрытую страницу) -->
-    <section class="py-16 bg-gradient-to-r from-brand-dark via-gray-900 to-brand-dark border-t border-b border-brand-accent/20">
-        <div class="max-w-5xl mx-auto px-4 text-center" data-aos="zoom-in">
-            <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Un projet plus ambitieux ?</h3>
-            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Aménagement sur mesure, rénovation esthétique, finitions haut de gamme... Découvrez mon savoir-faire technique pour vos projets d'envergure.
-            </p>
-            <a href="vip.html" class="inline-flex items-center gap-3 border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-brand-dark font-heading font-bold py-3 px-8 rounded-md transition-all">
-                Découvrir mes Réalisations Premium <i class="fas fa-arrow-right"></i>
-            </a>
+    <section class="section">
+      <div class="container feature">
+        <div class="feature-img reveal"><img src="assets/peinture.png" alt="Travail de peinture intérieure avec finition nette"></div>
+        <div class="reveal">
+          <span class="eyebrow">Besoin plus complet ?</span>
+          <h2>Des finitions intérieures sur devis.</h2>
+          <p class="lead">Pour une pièce à rafraîchir, un carrelage à reprendre ou plusieurs interventions à coordonner, votre demande est étudiée avant engagement.</p>
+          <div class="service-list"><span>Peinture & finitions</span><span>Carrelage & faïence</span><span>Aménagement intérieur</span><span>Petites reprises sanitaires</span></div>
+          <div class="hero-actions"><a class="btn" href="prestations.html">Découvrir les prestations →</a></div>
+          <div class="legal-note">Les prestations sont proposées uniquement dans le périmètre de l'activité déclarée, des qualifications reconnues et des assurances souscrites. La faisabilité est confirmée avant devis.</div>
         </div>
+      </div>
     </section>
 
-    <!-- Форма Formspree -->
-    <section id="devis" class="py-20 bg-brand-dark border-t border-gray-800">
-        <div class="max-w-3xl mx-auto px-4" data-aos="fade-up">
-            <h3 class="font-heading text-3xl font-bold text-white mb-8 text-center">Devis Rapide & Gratuit</h3>
-            <div class="bg-brand-light p-8 rounded-xl border border-gray-800 shadow-2xl">
-                <form action="https://formspree.io/f/xljeawwg" method="POST" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm text-gray-400 mb-2">Nom & Prénom</label>
-                            <input type="text" name="Nom" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-sm text-gray-400 mb-2">Téléphone</label>
-                            <input type="tel" name="Telephone" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm text-gray-400 mb-2">Code Postal / Ville</label>
-                        <input type="text" name="Adresse" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors">
-                    </div>
-                    <div>
-                        <label class="block text-sm text-gray-400 mb-2">Description des travaux</label>
-                        <textarea name="Description" rows="4" placeholder="Ex: J'ai besoin de monter une commode IKEA..." required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none transition-colors"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-brand-accent text-brand-dark font-bold text-lg py-4 rounded-lg hover:bg-yellow-500 transition-colors shadow-lg">Envoyer la demande</button>
-                </form>
-            </div>
+    <section class="section white" id="realisations">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Réalisations</span><h2>Des projets réalisés<br>avec précision.</h2></div>
+          <p>Cuisines, salles de bains, agencements et finitions : découvrez une sélection de chantiers réalisés à Paris et en Île-de-France.</p>
         </div>
+        <div class="portfolio-preview">
+          <a class="preview-project reveal" href="realisations.html#cuisine-paris-16">
+            <img src="assets/realisations/cuisine-paris16.webp" alt="Petite cuisine visible à travers une ouverture, Paris 16e" loading="lazy">
+            <span><small>Paris 16e</small><strong>Petite cuisine intégrée</strong></span>
+          </a>
+          <a class="preview-project reveal" href="realisations.html#salle-bains-paris-16">
+            <img src="assets/realisations/salle-bains-laiton-paris16.webp" alt="Douche premium avec robinetterie finition laiton à Paris 16e" loading="lazy">
+            <span><small>Paris 16e</small><strong>Salle de bains premium</strong></span>
+          </a>
+          <a class="preview-project reveal" href="realisations.html#habillage-bois">
+            <img src="assets/realisations/habillage-bois.webp" alt="Habillage mural en bois et porte intégrée" loading="lazy">
+            <span><small>Agencement intérieur</small><strong>Habillage mural en bois</strong></span>
+          </a>
+        </div>
+        <div class="portfolio-more reveal"><a class="btn" href="realisations.html">Découvrir les 6 réalisations →</a></div>
+      </div>
     </section>
 
-    <!-- Футер с добавленными ссылками -->
-    <footer class="bg-brand-dark border-t border-gray-800 pt-12 pb-8 text-center">
-        <p class="text-gray-400 mb-4 font-heading font-bold">📞 07 66 99 70 54 | ✉️ isotron44@gmail.com</p>
-        
-        <div class="flex justify-center gap-6 mb-6">
-            <a href="infos.html" class="text-sm text-gray-500 hover:text-brand-accent transition-colors">Tarifs & Avis</a>
-            <a href="infos.html" class="text-sm text-gray-500 hover:text-brand-accent transition-colors">Mentions Légales</a>
+    <section class="section white" id="tarifs">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Tarifs indicatifs</span><h2>Un prix simple, annoncé avant de venir.</h2></div>
+          <p>Pour le petit bricolage courant. Après réception des photos et de l'adresse, le montant est confirmé avant toute intervention.</p>
         </div>
-        
-        <p class="text-sm text-gray-600">&copy; 2026 K Bricolage Pro. Basé à Clamart, Île-de-France.</p>
-    </footer>
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <small>Main-d'œuvre</small>
+            <strong>45 €<em>/ heure</em></strong>
+            <p>Minimum de facturation : 1 heure. Puis calcul par tranche de 30 minutes.</p>
+          </article>
+          <article class="pricing-card featured reveal">
+            <span class="pricing-badge">Le plus demandé</span>
+            <small>Demi-journée</small>
+            <strong>170 €<em>/ 4 heures</em></strong>
+            <p>Idéal pour regrouper montage, fixations et petites réparations.</p>
+          </article>
+          <article class="pricing-card reveal">
+            <small>Journée</small>
+            <strong>290 €<em>/ 7 heures</em></strong>
+            <p>Pour plusieurs tâches ou un aménagement intérieur plus complet.</p>
+          </article>
+        </div>
 
-    <!-- Скрипт для запуска анимаций -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 800,
-            offset: 100
-        });
-    </script>
+        <div class="travel-box reveal">
+          <div class="travel-intro"><span class="eyebrow">Déplacement depuis Clamart</span><h3>Selon la distance réelle</h3></div>
+          <div class="travel-rates">
+            <div><b>15 €</b><span>Clamart et jusqu'à 10 km</span></div>
+            <div><b>25 €</b><span>de 10 à 20 km</span></div>
+            <div><b>30 €</b><span>Paris intra-muros</span></div>
+          </div>
+        </div>
+
+        <div class="pricing-notes reveal">
+          <p><strong>Stationnement et péages :</strong> ajoutés au montant réel, sur justificatif.</p>
+          <p><strong>Fournitures :</strong> non comprises, sauf mention contraire sur le devis.</p>
+          <p><strong>Travaux techniques ou finitions :</strong> prix sur devis selon la nature du support et la prestation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zone">
+      <div class="container">
+        <div class="zone reveal">
+          <div><span class="eyebrow">Zone d'intervention</span><h3>Clamart + secteur proche</h3><p>Déplacements adaptés à la durée et à la nature de l'intervention.</p></div>
+          <div class="zone-tags"><span class="tag">Clamart</span><span class="tag">Meudon</span><span class="tag">Issy</span><span class="tag">Châtillon</span><span class="tag">Vanves</span><span class="tag">Vélizy</span><span class="tag">Massy</span><span class="tag">Paris sud</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="contact">
+      <div class="container contact">
+        <div>
+          <span class="eyebrow">Demande de devis</span>
+          <h2>Expliquez votre besoin.</h2>
+          <p>Indiquez la ville, les dimensions utiles et joignez des photos dans votre e-mail. Vous recevrez une première réponse sur la faisabilité et le tarif.</p>
+          <p><a href="mailto:isotron44@gmail.com">isotron44@gmail.com</a></p>
+          <p class="contact-hint">Le formulaire ouvre votre application de messagerie : vous pourrez vérifier le message et y joindre des photos avant l’envoi.</p>
+          <div class="legal-note">Réponse indicative avant vérification sur place. Le devis final précise la prestation, les fournitures, les frais éventuels et le délai.</div>
+        </div>
+        <form class="contact-form">
+          <label>Nom<input name="nom" required autocomplete="name"></label>
+          <label>Ville<input name="ville" required autocomplete="address-level2"></label>
+          <label>Votre besoin<textarea name="message" required placeholder="Ex. montage d'un meuble, fixation de 3 étagères…"></textarea></label>
+          <button class="btn" type="submit">Préparer mon e-mail →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="index.html"><span class="brand-mark">K</span><span>K-Rénov</span></a><p>Petit bricolage et finitions intérieures à Clamart et alentours.</p></div>
+      <div><strong>Navigation</strong><p><a href="#services">Petits travaux</a><br><a href="prestations.html">Finitions & projets</a><br><a href="realisations.html">Réalisations</a><br><a href="#contact">Contact</a></p></div>
+      <div><strong>Informations</strong><p><a href="mentions.html">Mentions légales</a><br><a href="mentions.html#cadre">Cadre des prestations</a></p></div>
+    </div>
+    <div class="container"><small>© 2026 K-Rénov — Site en version de test. Les informations professionnelles seront ajoutées avant le lancement de l’activité.</small></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
