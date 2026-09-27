@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://isotron44-lang.github.io/K-Renov/sitemap.xml
