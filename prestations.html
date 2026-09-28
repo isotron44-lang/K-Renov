@@ -10,28 +10,32 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="K-Rénov">
   <meta property="og:title" content="Finitions &amp; projets intérieurs — K-Rénov">
-  <meta property="og:description" content="Peinture, carrelage et aménagement intérieur sur devis, à Clamart et alentours.">
+  <meta property="og:description" content="Peinture, finitions, carrelage et aménagement intérieur sur devis à Clamart et alentours. 07 66 99 70 54.">
   <meta property="og:url" content="https://isotron44-lang.github.io/K-Renov/prestations.html">
-  <meta property="og:image" content="https://isotron44-lang.github.io/K-Renov/assets/peinture.jpg">
+  <meta property="og:image" content="https://isotron44-lang.github.io/K-Renov/assets/peinture.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#10243c">
+  <meta name="theme-color" content="#18212e">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400..700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
-  <div class="topbar">Clamart • Hauts-de-Seine • Sud &amp; Ouest parisien · <a href="tel:+33766997054">07 66 99 70 54</a></div>
+  <div class="topbar"><span class="where">Clamart · Hauts-de-Seine · Sud &amp; Ouest parisien — </span><a href="tel:+33766997054">07 66 99 70 54</a></div>
   <header class="site-header">
     <nav class="nav container" aria-label="Navigation principale">
-      <a class="brand" href="index.html"><span class="brand-mark">K</span><span>K-Rénov<small>Homme à tout faire</small></span></a>
-      <button class="mobile-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+      <a class="brand" href="index.html" aria-label="K-Rénov, accueil"><span class="brand-mark" aria-hidden="true">K</span><span><span class="brand-name">K-Rénov</span><small>Artisan · Clamart</small></span></a>
+      <button class="mobile-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-menu"><span></span></button>
       <div class="menu" id="main-menu">
-        <a href="index.html">Accueil</a>
-        <a href="#prestations">Prestations</a>
-        <a href="#methode">Méthode</a>
+        <a href="index.html#services">Petits travaux</a>
+        <a href="prestations.html" aria-current="page">Finitions</a>
         <a href="realisations.html">Réalisations</a>
-        <a class="btn" href="index.html#contact">Demander un devis</a>
+        <a href="index.html#tarifs">Tarifs</a>
+        <a href="index.html#faq">Questions</a>
+        <a class="btn small" href="index.html#contact">Demander un devis</a>
       </div>
     </nav>
   </header>
@@ -39,75 +43,90 @@
     <section class="subhero">
       <div class="container">
         <span class="eyebrow">Finitions &amp; projets intérieurs</span>
-        <h1>Plus qu'une retouche.<br>Toujours le même soin.</h1>
+        <h1>Plus qu'une retouche. <em>Toujours le même soin.</em></h1>
         <p>Des prestations étudiées sur devis pour améliorer, rafraîchir ou finaliser votre intérieur, avec un périmètre clair avant le début des travaux.</p>
-        <div class="hero-actions"><a class="btn" href="index.html#contact">Présenter mon projet →</a><a class="btn secondary on-dark" href="#prestations">Voir les prestations</a></div>
+        <div class="hero-actions"><a class="btn light" href="index.html#contact">Présenter mon projet <span class="arrow" aria-hidden="true">→</span></a><a class="btn on-dark" href="#prestations">Voir les prestations</a></div>
       </div>
     </section>
 
     <section class="section" id="prestations">
       <div class="container">
         <div class="work-grid">
-          <article class="work-card reveal">
-            <img src="assets/peinture.jpg" alt="Application soignée d'une peinture intérieure" width="1100" height="825" loading="lazy">
-            <div class="work-card-body">
+          <article class="work reveal">
+            <img src="assets/peinture.webp" alt="Application soignée d'une peinture intérieure au rouleau" width="1100" height="825" loading="lazy">
+            <div class="work-body">
               <span class="eyebrow">Peinture &amp; finitions</span>
               <h3>Une pièce nette, jusque dans les détails.</h3>
               <ul><li>Préparation légère des supports</li><li>Peinture murs et plafonds</li><li>Retouches et reprises localisées</li><li>Finitions autour des portes et plinthes</li></ul>
             </div>
           </article>
-          <article class="work-card reveal">
-            <img src="assets/carrelage.jpg" alt="Pose précise de carrelage mural" width="1100" height="825" loading="lazy">
-            <div class="work-card-body">
+          <article class="work reveal">
+            <img src="assets/carrelage.webp" alt="Pose précise de carrelage mural contrôlée au niveau" width="1100" height="825" loading="lazy">
+            <div class="work-body">
               <span class="eyebrow">Carrelage &amp; faïence</span>
               <h3>Pose, remplacement et reprises ciblées.</h3>
               <ul><li>Petites surfaces murales ou au sol</li><li>Crédence et faïence</li><li>Remplacement de carreaux</li><li>Joints et finitions</li></ul>
+            </div>
+          </article>
+          <article class="work reveal">
+            <img src="assets/realisations/habillage-bois.webp" alt="Habillage mural en tasseaux de bois avec porte intégrée" width="1050" height="1400" loading="lazy">
+            <div class="work-body">
+              <span class="eyebrow">Aménagement intérieur</span>
+              <h3>Des rangements et habillages bien intégrés.</h3>
+              <ul><li>Montage et ajustement de mobilier</li><li>Habillages muraux</li><li>Étagères et rangements sur mesure du support</li><li>Réglages et finitions visibles</li></ul>
+            </div>
+          </article>
+          <article class="work reveal">
+            <img src="assets/realisations/vasque-miroir.webp" alt="Meuble vasque cintré en bois avec miroir lumineux" width="1050" height="1400" loading="lazy">
+            <div class="work-body">
+              <span class="eyebrow">Petites reprises sanitaires</span>
+              <h3>Les finitions de la salle de bains.</h3>
+              <ul><li>Pose de meuble vasque et miroir</li><li>Accessoires de salle de bains</li><li>Reprise de joints silicone</li><li>Réglages et alignements</li></ul>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section white" id="methode">
+    <section class="section ivory" id="methode">
       <div class="container feature">
-        <div>
+        <div class="reveal">
           <span class="eyebrow">Méthode</span>
-          <h2>Un projet accepté seulement s'il est maîtrisé.</h2>
-          <div class="numbered">
-            <div><b>1</b><p><strong>Qualification de la demande.</strong><br>Photos, dimensions, état du support et résultat attendu.</p></div>
-            <div><b>2</b><p><strong>Vérification du périmètre.</strong><br>Nature des travaux, activité déclarée et couverture d'assurance.</p></div>
-            <div><b>3</b><p><strong>Devis détaillé.</strong><br>Main-d'œuvre, fournitures, déplacement, stationnement et délai.</p></div>
-            <div><b>4</b><p><strong>Réalisation propre.</strong><br>Protection, exécution soignée et remise en état de la zone.</p></div>
+          <h2>Un projet accepté <em>seulement s'il est maîtrisé.</em></h2>
+          <div class="method">
+            <div><p><strong>Qualification de la demande.</strong><br>Photos, dimensions, état du support et résultat attendu.</p></div>
+            <div><p><strong>Vérification du périmètre.</strong><br>Nature des travaux, activité déclarée et couverture d'assurance.</p></div>
+            <div><p><strong>Devis détaillé.</strong><br>Main-d'œuvre, fournitures, déplacement, stationnement et délai.</p></div>
+            <div><p><strong>Réalisation propre.</strong><br>Protection, exécution soignée et remise en état de la zone.</p></div>
           </div>
         </div>
-        <div class="card">
+        <div class="panel reveal">
           <h3>Ce qui n'est pas présenté comme une simple prestation</h3>
-          <p>Les travaux structurels, le gros œuvre, les installations complètes d'électricité ou de plomberie, le gaz, le chauffage, l'étanchéité lourde et tout chantier exigeant une couverture non souscrite.</p>
-          <div class="legal-note">Une demande hors périmètre est refusée ou orientée vers un professionnel qualifié et assuré. Le terme commercial « prestations sur mesure » ne modifie jamais le cadre légal de l'intervention.</div>
+          <p class="muted">Les travaux structurels, le gros œuvre, les installations complètes d'électricité ou de plomberie, le gaz, le chauffage, l'étanchéité lourde et tout chantier exigeant une couverture non souscrite.</p>
+          <p class="note">Une demande hors périmètre est refusée ou orientée vers un professionnel qualifié et assuré. Le terme commercial « prestations sur mesure » ne modifie jamais le cadre légal de l'intervention.</p>
         </div>
       </div>
     </section>
-
+  <img class="skyline ivory" src="assets/skyline.svg" alt="" width="1440" height="160">
     <section class="section dark">
-      <div class="container">
-        <div class="cta">
-          <div><h2>Votre projet tient en quelques photos.</h2><p>Envoyez la pièce concernée, les dimensions approximatives et le résultat recherché. Une première réponse permettra de déterminer la suite.</p></div>
-          <a class="btn" href="https://wa.me/33766997054?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener">Envoyer mes photos →</a>
-        </div>
+      <div class="container cta">
+        <div><span class="eyebrow">Parlons de votre projet</span><h2>Votre projet tient <em>en quelques photos.</em></h2><p>Envoyez la pièce concernée, les dimensions approximatives et le résultat recherché. Une première réponse permettra de déterminer la suite.</p></div>
+        <div class="hero-actions" style="margin:0;justify-self:end"><a class="btn whatsapp" href="https://wa.me/33766997054?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-.9-.8.7a4 4 0 0 1-2.4-2.4l.7-.8-.9-1.8z"/></svg>Envoyer mes photos</a><a class="btn on-dark" href="tel:+33766997054"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>07 66 99 70 54</a></div>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="container footer-grid">
-      <div><a class="brand" href="index.html"><span class="brand-mark">K</span><span>K-Rénov</span></a><p>Petit bricolage et finitions intérieures à Clamart et alentours.</p><p><a href="tel:+33766997054">07 66 99 70 54</a></p></div>
-      <div><strong>Navigation</strong><p><a href="index.html">Accueil</a><br><a href="#prestations">Prestations</a><br><a href="realisations.html">Réalisations</a><br><a href="index.html#contact">Contact</a></p></div>
-      <div><strong>Informations</strong><p><a href="mentions.html">Mentions légales</a><br><a href="mentions.html#cadre">Cadre des prestations</a></p></div>
+      <div><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span class="brand-name">K-Rénov</span></a><p style="margin-top:16px">Petit bricolage et finitions intérieures à Clamart et alentours.</p><p><a href="tel:+33766997054">07 66 99 70 54</a></p></div>
+      <div><strong>Navigation</strong><p><a href="index.html#services">Petits travaux</a></p><p><a href="prestations.html">Finitions &amp; projets</a></p><p><a href="realisations.html">Réalisations</a></p><p><a href="index.html#contact">Contact</a></p></div>
+      <div><strong>Informations</strong><p><a href="index.html#tarifs">Tarifs</a></p><p><a href="index.html#faq">Questions fréquentes</a></p><p><a href="mentions.html">Mentions légales</a></p><p><a href="mentions.html#cadre">Cadre des prestations</a></p></div>
     </div>
+    <div class="container footer-bottom">© 2026 K-Rénov — Site en version de test. Les informations professionnelles seront ajoutées avant le lancement de l'activité.</div>
   </footer>
-  <div class="call-bar" aria-label="Contact rapide">
-    <a href="tel:+33766997054">Appeler</a>
-    <a href="https://wa.me/33766997054?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener">WhatsApp</a>
-  </div>
+  <nav class="call-bar" aria-label="Contact rapide">
+    <a href="tel:+33766997054"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+    <a href="https://wa.me/33766997054?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-.9-.8.7a4 4 0 0 1-2.4-2.4l.7-.8-.9-1.8z"/></svg>WhatsApp</a>
+  </nav>
   <script src="script.js"></script>
 </body>
 </html>
