@@ -344,3 +344,11 @@ mark.todo{padding:1px 6px;border-radius:6px;background:#fbe3a6;color:#5a4410}
   .hero-actions .btn{flex:1 1 auto}
 }
 @media(max-width:640px){.brand small{display:block;font-size:.58rem;letter-spacing:.12em}}
+/* Signature de l'auteur du site */
+.credit{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;margin-top:30px;padding:22px 26px;border:1px solid rgba(201,165,99,.3);border-radius:var(--radius);background:linear-gradient(120deg,rgba(201,165,99,.1),rgba(255,255,255,.02))}
+.credit-mark{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:1px solid var(--brass-2);color:var(--brass-2);font-family:var(--serif);font-style:italic;font-size:1.05rem;letter-spacing:.04em;box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 5px rgba(201,165,99,.45)}
+.credit p{margin:0;display:grid;gap:2px}
+.credit strong{margin:0;font-family:var(--serif);font-weight:500;font-size:1.15rem;color:#fff}
+.credit span{font-size:.9rem;color:#aab3bf}
+.credit em{font-family:var(--serif);color:var(--brass-2)}
+@media(max-width:640px){.credit{grid-template-columns:auto 1fr;padding:20px}.credit .btn{grid-column:1/-1;width:100%}}
