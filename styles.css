@@ -343,3 +343,4 @@ mark.todo{padding:1px 6px;border-radius:6px;background:#fbe3a6;color:#5a4410}
   .hero-badge{display:none}
   .hero-actions .btn{flex:1 1 auto}
 }
+@media(max-width:640px){.brand small{display:block;font-size:.58rem;letter-spacing:.12em}}
