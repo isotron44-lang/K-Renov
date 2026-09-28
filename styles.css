@@ -352,3 +352,11 @@ mark.todo{padding:1px 6px;border-radius:6px;background:#fbe3a6;color:#5a4410}
 .credit span{font-size:.9rem;color:#aab3bf}
 .credit em{font-family:var(--serif);color:var(--brass-2)}
 @media(max-width:640px){.credit{grid-template-columns:auto 1fr;padding:20px}.credit .btn{grid-column:1/-1;width:100%}}
+
+/* Avis Google */
+.reviews-card{margin-top:40px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:30px 34px;border:1px solid var(--line);border-radius:22px;background:var(--ivory)}
+.reviews-stars{font-size:1.5rem;letter-spacing:3px;color:var(--brass)}
+.reviews-card h3{margin:0 0 6px}
+.reviews-card p{margin:0;color:var(--muted)}
+.reviews-actions{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:980px){.reviews-card{grid-template-columns:1fr;gap:16px;padding:26px 22px}.reviews-actions .btn{flex:1 1 220px}}
