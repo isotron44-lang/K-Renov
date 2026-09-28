@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dawn-resonance-1b79.karlosvsantana.workers.dev/sitemap.xml

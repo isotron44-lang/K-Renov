@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outil gratuit : préparer une consigne claire pour l’IA · L’IA, simplement</title>
+<meta name="description" content="Transformez une demande vague en consigne claire pour ChatGPT, Gemini ou Copilot. Gratuit, sans inscription, rien n’est envoyé.">
+
+<link rel="canonical" href="https://dawn-resonance-1b79.karlosvsantana.workers.dev/outil">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L’IA, simplement">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Outil gratuit : préparer une consigne claire pour l’IA · L’IA, simplement">
+<meta property="og:description" content="Transformez une demande vague en consigne claire pour ChatGPT, Gemini ou Copilot. Gratuit, sans inscription, rien n’est envoyé.">
+<meta property="og:url" content="https://dawn-resonance-1b79.karlosvsantana.workers.dev/outil">
+<meta property="og:image" content="https://dawn-resonance-1b79.karlosvsantana.workers.dev/og/accueil.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Outil gratuit : préparer une consigne claire pour l’IA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#176fe0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css?v=97d6b81c">
+
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<p class="notice">Les 5 guides « Débuter » sont gratuits. Nouveaux guides en cours d’écriture : <a href="/a-venir">voir et voter</a>.</p>
+<header class="top"><nav class="wrap nav" aria-label="Navigation principale"><a class="logo" href="/">L’IA, <b>simplement.</b></a><div class="navlinks"><a href="/bibliotheque">Bibliothèque</a><a href="/#commencer-ici">Débuter</a><a href="/outil" aria-current="page">Outil gratuit</a><a href="/avis">Votre avis</a></div></nav></header>
+<main id="contenu">
+<div class="wrap pagehead page-end">
+<span class="eyebrow">Outil gratuit</span>
+<h1>Rendez votre demande plus claire.</h1>
+<p class="lead">Cet outil ne parle pas à une IA : il transforme votre phrase en un modèle de consigne, structuré comme dans nos guides. Vous le copiez ensuite dans ChatGPT, Gemini, Copilot ou l’outil que vous utilisez déjà.</p>
+<div class="grid steps">
+<div class="card"><span class="badge">1</span><h3>Décrivez votre besoin</h3><p>En une phrase simple, comme vous le diriez à quelqu’un.</p></div>
+<div class="card"><span class="badge">2</span><h3>Copiez la consigne</h3><p>L’outil prépare un modèle avec des cases entre crochets.</p></div>
+<div class="card"><span class="badge">3</span><h3>Complétez et envoyez</h3><p>Collez-la dans votre IA, remplacez les crochets, vérifiez la réponse.</p></div>
+</div>
+<noscript><p class="note">Cet outil a besoin de JavaScript. Vous pouvez aussi utiliser le modèle de consigne présenté dans le guide <a class="inline" href="/guides/chatgpt-debutant">ChatGPT : premiers pas utiles</a>.</p></noscript>
+<div class="tool">
+<div class="panel">
+<label for="task"><strong>Votre demande</strong></label>
+<p class="small">Exemple : « un mail pour demander un rendez-vous »</p>
+<textarea id="task" maxlength="500" placeholder="Je veux écrire un message à mon client…"></textarea>
+<div class="field"><label for="who">Contexte <span class="small">(facultatif)</span></label><input type="text" id="who" maxlength="300" placeholder="Pour qui ? Dans quelle situation ?"></div>
+<div class="field"><label for="format">Format <span class="small">(facultatif)</span></label><select id="format"><option value="">Je ne sais pas encore</option><option>SMS</option><option>courriel</option><option>liste à puces</option><option>tableau</option><option>résumé en 5 lignes</option><option>plan en étapes</option></select></div>
+<div class="field"><label for="tone">Ton <span class="small">(facultatif)</span></label><select id="tone"><option value="">Je ne sais pas encore</option><option>simple et direct</option><option>poli et professionnel</option><option>chaleureux</option><option>neutre et factuel</option></select></div>
+<div class="actions"><button id="make" class="btn" type="button">Préparer ma consigne</button><button id="example" class="btn alt" type="button">Voir un exemple</button></div>
+</div>
+<div class="panel">
+<strong>Consigne proposée</strong>
+<p class="small">Remplacez chaque [mot entre crochets] par votre vraie information, puis collez le tout dans votre assistant IA.</p>
+<div id="output" class="output" aria-live="polite">Votre consigne apparaîtra ici.</div>
+<button id="copy" class="btn alt" type="button" hidden>Copier la consigne</button>
+</div>
+</div>
+<p class="small">La consigne est préparée dans votre navigateur. Votre texte n’est envoyé à aucun service d’IA ni à aucun serveur.</p>
+</div>
+</main>
+<footer class="footer"><div class="wrap">
+<div class="foot"><span>L’IA, simplement · projet éditorial indépendant</span>
+<nav aria-label="Pied de page"><a href="/bibliotheque">Bibliothèque</a><a href="/a-venir">Guides à venir</a><a href="/outil">Outil gratuit</a><a href="/avis">Donner un avis</a><a href="/auteurs">Les auteurs</a><a href="/droits">Droits d’auteur</a><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité</a></nav></div>
+<p class="foot-note">Présentation indépendante, sans lien avec OpenAI, Google ou Microsoft. ChatGPT, Gemini, Copilot, Word, Excel, PowerPoint et LM Studio sont des marques de leurs titulaires respectifs.</p>
+</div></footer>
+<script src="/app.js?v=695fe6c1" defer></script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

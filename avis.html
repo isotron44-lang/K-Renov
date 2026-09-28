@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Donner un avis · L’IA, simplement</title>
+<meta name="description" content="Donnez votre avis sur les guides et le site L’IA, simplement : ce qui vous a aidé, ce qui reste flou, une erreur à signaler.">
+
+<link rel="canonical" href="https://dawn-resonance-1b79.karlosvsantana.workers.dev/avis">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L’IA, simplement">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Donner un avis · L’IA, simplement">
+<meta property="og:description" content="Donnez votre avis sur les guides et le site L’IA, simplement : ce qui vous a aidé, ce qui reste flou, une erreur à signaler.">
+<meta property="og:url" content="https://dawn-resonance-1b79.karlosvsantana.workers.dev/avis">
+<meta property="og:image" content="https://dawn-resonance-1b79.karlosvsantana.workers.dev/og/accueil.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Donner un avis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#176fe0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css?v=97d6b81c">
+
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<p class="notice">Les 5 guides « Débuter » sont gratuits. Nouveaux guides en cours d’écriture : <a href="/a-venir">voir et voter</a>.</p>
+<header class="top"><nav class="wrap nav" aria-label="Navigation principale"><a class="logo" href="/">L’IA, <b>simplement.</b></a><div class="navlinks"><a href="/bibliotheque">Bibliothèque</a><a href="/#commencer-ici">Débuter</a><a href="/outil">Outil gratuit</a><a href="/avis" aria-current="page">Votre avis</a></div></nav></header>
+<main id="contenu">
+<div class="wrap pagehead page-end">
+<span class="eyebrow">Votre avis</span>
+<h1>Aidez-nous à améliorer les guides.</h1>
+<p class="lead">Vous avez lu un guide ou essayé l’outil ? Dites-nous ce qui vous a aidé, ce qui reste difficile, ou signalez une erreur.</p>
+<form id="feedback-form" class="form" action="https://formspree.io/f/xwlpwlkz" method="POST" data-formspree data-thanks="Merci, votre avis a bien été envoyé. Il sera lu attentivement." novalidate>
+<input type="hidden" name="formulaire" value="Avis">
+<input type="hidden" name="_subject" value="Nouvel avis · L’IA, simplement">
+<input type="hidden" name="provenance" value="">
+<div><label for="fb-page">Qu’avez-vous testé ?</label>
+<select id="fb-page" name="partie" required><option value="">Choisissez…</option><option>Un guide en PDF</option><option>L’extrait en ligne</option><option>L’outil gratuit</option><option>La bibliothèque / le site</option><option>Autre</option></select></div>
+<div><label for="fb-guide">Quel guide ? <span class="small">(facultatif)</span></label>
+<select id="fb-guide" name="guide"><option value="">Aucun en particulier</option><option value="chatgpt-debutant">ChatGPT : premiers pas utiles</option><option value="gemini-documents">Gemini : lire et comparer vos documents</option><option value="copilot-office">Copilot pour Word, Excel et PowerPoint</option><option value="cloud-premiers-pas">Le cloud : premiers pas utiles</option><option value="arnaques-deepfakes">Arnaques et deepfakes : les reconnaître sans paniquer</option><option value="ia-artisans">L’IA pour artisans et indépendants</option><option value="photos-documents">Photos, reçus et plans : utiliser l’IA visuelle</option><option value="courriers-administratifs">Courriers administratifs avec l’IA</option><option value="cv-emploi">CV et recherche d’emploi avec l’IA</option><option value="seniors-ia">Seniors et intelligence artificielle</option><option value="arnaques-deepfakes-complet">Arnaques et deepfakes : le guide complet</option><option value="assistant-personnalise">Configurer un assistant pour une tâche répétitive</option><option value="planifier-projet">Planifier un projet avec l’IA</option><option value="contenu-visuels">Créer des visuels et des scénarios avec l’IA</option><option value="consignes-fiables">Des consignes fiables pour l’IA</option><option value="lm-studio-local">LM Studio : une IA locale sur votre PC</option><option value="documents-prives">Vos documents avec une IA locale</option></select></div>
+<fieldset><legend>C’était clair ?</legend><div class="rating-options">
+<label><input type="radio" name="clarte" value="Très clair" required> Très clair</label>
+<label><input type="radio" name="clarte" value="Plutôt clair"> Plutôt clair</label>
+<label><input type="radio" name="clarte" value="Confus par endroits"> Confus par endroits</label>
+<label><input type="radio" name="clarte" value="Difficile à suivre"> Difficile à suivre</label>
+</div></fieldset>
+<div><label for="fb-comment">Votre commentaire</label>
+<textarea id="fb-comment" name="commentaire" required maxlength="4000" placeholder="Qu’est-ce qui vous a aidé ? Qu’est-ce qui reste difficile ? Une erreur à signaler ?"></textarea></div>
+<div><label for="fb-email">Email <span class="small">(facultatif, pour vous répondre)</span></label>
+<input type="email" id="fb-email" name="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+<div class="hidden-check" aria-hidden="true"><label>Ne remplissez pas ce champ<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+<p class="small">Vos réponses servent uniquement à améliorer les guides. <a class="inline" href="/confidentialite">Comment vos données sont traitées</a>.</p>
+<button type="submit" class="btn">Envoyer mon avis</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form>
+</div>
+</main>
+<footer class="footer"><div class="wrap">
+<div class="foot"><span>L’IA, simplement · projet éditorial indépendant</span>
+<nav aria-label="Pied de page"><a href="/bibliotheque">Bibliothèque</a><a href="/a-venir">Guides à venir</a><a href="/outil">Outil gratuit</a><a href="/avis">Donner un avis</a><a href="/auteurs">Les auteurs</a><a href="/droits">Droits d’auteur</a><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité</a></nav></div>
+<p class="foot-note">Présentation indépendante, sans lien avec OpenAI, Google ou Microsoft. ChatGPT, Gemini, Copilot, Word, Excel, PowerPoint et LM Studio sont des marques de leurs titulaires respectifs.</p>
+</div></footer>
+<script src="/app.js?v=695fe6c1" defer></script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
