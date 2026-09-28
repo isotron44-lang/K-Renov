@@ -4,11 +4,13 @@ const menu = document.querySelector('.menu');
 function closeMenu() {
   menu?.classList.remove('open');
   toggle?.setAttribute('aria-expanded', 'false');
+  toggle?.setAttribute('aria-label', 'Ouvrir le menu');
 }
 
 toggle?.addEventListener('click', () => {
   const open = menu?.classList.toggle('open') ?? false;
   toggle.setAttribute('aria-expanded', String(open));
+  toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
 });
 document.querySelectorAll('.menu a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => {
