@@ -87,9 +87,32 @@
           </article>
           <article class="card reveal">
             <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="14" height="6" rx="1.5"/><path d="M17 6h3v5h-9v3"/><rect x="9" y="14" width="4" height="7" rx="1"/></svg></span>
-            <h3>Entretenir &amp; réparer</h3><p>Joints, retouches, remplacement d'éléments simples et petites réparations courantes.</p>
+            <h3>Entretenir &amp; réparer</h3><p>Joints silicone, retouches légères, menues réparations et remplacement d'éléments simples.</p>
           </article>
         </div>
+
+        <!-- Passerelle Grands Chantiers & Partenaire Décennale -->
+        <div class="reveal" style="margin-top: 36px; padding: 26px 30px; border-radius: 20px; background: linear-gradient(135deg, #10243c 0%, #1c3b5c 100%); color: #fff; box-shadow: 0 10px 30px rgba(16,36,60,0.15);">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+            <div style="max-width: 680px;">
+              <span style="display: inline-block; background: #d86c3a; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
+                Passerelle Rénovation Lourde &bull; Partenaire Décennale
+              </span>
+              <h3 style="margin: 0 0 8px; font-size: 1.35rem; color: #fff; line-height: 1.2;">Votre projet dépasse le cadre du petit bricolage ?</h3>
+              <p style="margin: 0; color: #cbd6de; font-size: 0.92rem; line-height: 1.55;">
+                Pour les chantiers de rénovation complète d'appartement, réfection totale de salle de bains, plomberie lourde, électricité générale ou isolation thermique : KVH Rénov qualifie votre besoin et vous met en relation directe avec notre <strong>entreprise générale partenaire certifiée &amp; assurée décennale</strong>.
+              </p>
+            </div>
+            <a class="btn" href="#contact" onclick="selectGrosTravaux()" style="white-space: nowrap; background: #d86c3a; color: #fff; border: 0; align-self: center;">
+              Demander un grand chantier →
+            </a>
+          </div>
+          <div style="font-size: 0.8rem; color: #9bb0c2; border-top: 1px solid rgba(255,255,255,0.12); margin-top: 16px; padding-top: 12px; display: flex; flex-wrap: wrap; gap: 15px;">
+            <span>✓ <strong>Petits travaux</strong> : Intervention directe KVH Rénov</span>
+            <span>✓ <strong>Gros chantiers</strong> : Entreprise générale partenaire avec garantie décennale &amp; RGE</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -116,7 +139,9 @@
           <p class="lead">Pour une pièce à rafraîchir, un carrelage à reprendre ou plusieurs interventions à coordonner, votre demande est étudiée avant engagement.</p>
           <div class="service-list"><span>Peinture &amp; finitions</span><span>Carrelage &amp; faïence</span><span>Aménagement intérieur</span><span>Petites reprises sanitaires</span></div>
           <div class="hero-actions"><a class="btn" href="prestations.html">Découvrir les prestations →</a></div>
-          <div class="legal-note">Les prestations sont proposées uniquement dans le périmètre de l'activité déclarée, des qualifications reconnues et des assurances souscrites. La faisabilité est confirmée avant devis.</div>
+          <div class="legal-note" style="border-left-color: #10243c; background: #f0f4f8; color: #213547;">
+            <strong>Périmètre légal strict :</strong> KVH Rénov réalise en direct les petits travaux d'homme toutes mains sans impact structurel. Tout chantier nécessitant une assurance décennale obligatoire (gros œuvre, salle de bain complète, tableaux électriques) est orienté vers notre entreprise générale partenaire qualifiée.
+          </div>
         </div>
       </div>
     </section>
@@ -227,14 +252,27 @@
           <div class="legal-note">Réponse indicative avant vérification sur place. Le devis final précise la prestation, les fournitures, les frais éventuels et le délai.</div>
         </div>
         <form class="contact-form" action="https://formspree.io/f/xwlpwlkz" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="Demande de devis — KVH Rénov">
+          <input type="hidden" name="_subject" id="form-subject" value="Demande de devis — KVH Rénov">
           <input type="hidden" name="formulaire" value="KVH Rénov">
+          <input type="hidden" name="type_projet_libelle" id="type_projet_libelle" value="Petit bricolage & Finitions (Intervention directe KVH Rénov)">
+
+          <label>Type d'intervention
+            <select name="type_chantier" id="type_chantier" style="width: 100%; padding: 14px 16px; border: 1px solid #bbc4ca; border-radius: 12px; background: #fff; font-weight: 600; color: #10243c; font-size: 0.95rem;">
+              <option value="petit_bricolage">🔧 Petits travaux & Bricolage (Intervention directe KVH Rénov)</option>
+              <option value="renovation_lourde">🏢 Rénovation complète / Salle de bain / Gros travaux (Partenaire Décennale)</option>
+            </select>
+          </label>
+
+          <div id="notice-partenaire" style="display: none; background: #eef6f9; border-left: 4px solid #10243c; padding: 12px 14px; border-radius: 0 12px 12px 0; font-size: 0.83rem; color: #183752; line-height: 1.45;">
+            <strong>Mise en relation partenaire :</strong> Ce chantier nécessite une garantie décennale obligatoire. Votre demande sera qualifiée par KVH Rénov et transmise directement à notre <strong>entreprise générale partenaire assurée</strong>.
+          </div>
+
           <label>Nom<input name="nom" required autocomplete="name"></label>
           <label>Téléphone<input name="telephone" type="tel" required autocomplete="tel" placeholder="Pour vous rappeler"></label>
           <label>Ville<input name="ville" required autocomplete="address-level2"></label>
-          <label>Votre besoin<textarea name="message" required placeholder="Ex. montage d'un meuble, fixation de 3 étagères…"></textarea></label>
+          <label>Votre besoin<textarea name="message" id="form-message" required placeholder="Ex. montage d'un meuble, fixation de 3 étagères… ou rénovation complète de salle de bain"></textarea></label>
           <div class="hp" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
-          <button class="btn" type="submit">Envoyer ma demande →</button>
+          <button class="btn" type="submit" id="btn-submit">Envoyer ma demande →</button>
           <p class="form-status" role="status" aria-live="polite"></p>
           <p class="form-hint">Vos coordonnées servent uniquement à répondre à votre demande. Pour les photos, utilisez WhatsApp ou répondez à mon message.</p>
         </form>
