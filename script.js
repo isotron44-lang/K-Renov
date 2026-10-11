@@ -4,13 +4,11 @@ const menu = document.querySelector('.menu');
 function closeMenu() {
   menu?.classList.remove('open');
   toggle?.setAttribute('aria-expanded', 'false');
-  toggle?.setAttribute('aria-label', 'Ouvrir le menu');
 }
 
 toggle?.addEventListener('click', () => {
   const open = menu?.classList.toggle('open') ?? false;
   toggle.setAttribute('aria-expanded', String(open));
-  toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
 });
 document.querySelectorAll('.menu a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => {
@@ -57,7 +55,7 @@ if (form) {
     } catch (error) {
       const body = `Bonjour,\n\nJe souhaite demander un devis.\n\nNom : ${fields.get('nom')}\nTéléphone : ${fields.get('telephone')}\nVille : ${fields.get('ville')}\nDemande : ${fields.get('message')}`;
       say('L’envoi n’a pas abouti. Votre messagerie va s’ouvrir avec la demande pré-remplie, ou appelez le 07 66 99 70 54.', 'err');
-      window.location.href = `mailto:isotron44@gmail.com?subject=${encodeURIComponent('Demande de devis — K-Rénov')}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:isotron44@gmail.com?subject=${encodeURIComponent('Demande de devis — KVH Rénov')}&body=${encodeURIComponent(body)}`;
     } finally {
       button.disabled = false;
     }
