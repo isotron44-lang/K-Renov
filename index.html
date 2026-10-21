@@ -1,192 +1,313 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#10243c">
-<title>KVH Rénov</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="KVH Rénov, petits travaux et finitions à Clamart et dans le sud-ouest parisien. Notre nouveau site arrive bientôt.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
-<style>
-/* Layout: plan d'architecte sur papier quadrillé, colonne unique, un mètre ruban comme jauge d'avancement */
-:root {
-  --plaster: #f7f4ef;       /* fond papier du site KVH */
-  --sheet: #ffffff;
-  --ink: #10243c;           /* bleu marine KVH (couleur du site actuel) */
-  --bleu: #183752;          /* bleu marine secondaire du site */
-  --navy: #10243c;
-  --accent-text: #b84d24;
-  --ochre: #d86c3a;         /* orange KVH, accent du site */
-  --muted: #607080;
-  --grid: rgba(16, 36, 60, .06);
-  --line: #d9d5ce;
-  --font-display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
-  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --plaster: #0f1726; --sheet: #162036; --ink: #e8edf5; --bleu: #7fa6ef; --navy: #2b4a74; --accent-text: #e8834f;
-    --ochre: #e8834f; --muted: #9aa6ba; --grid: rgba(127, 166, 239, .07); --line: rgba(232, 237, 245, .14);
-    color-scheme: dark;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KVH Rénov — Rénovation, petits travaux et finitions à Clamart</title>
+  <meta name="description" content="Petit bricolage, montage, fixations et finitions intérieures à Clamart et dans le sud-ouest parisien. Prix annoncé avant de venir. 07 66 99 70 54.">
+  <link rel="canonical" href="https://isotron44-lang.github.io/K-Renov/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="KVH Rénov">
+  <meta property="og:title" content="KVH Rénov — Rénovation, petits travaux et finitions à Clamart">
+  <meta property="og:description" content="Montage, fixations, petites réparations et finitions intérieures. Prix annoncé avant de venir.">
+  <meta property="og:url" content="https://isotron44-lang.github.io/K-Renov/">
+  <meta property="og:image" content="https://isotron44-lang.github.io/K-Renov/assets/hero.jpg?v=20261011d">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#10243c">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pricing.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "KVH Rénov",
+    "description": "Petits travaux de bricolage, montage de meubles, finitions intérieures et mise en relation qualifiée pour chantiers de rénovation.",
+    "url": "https://isotron44-lang.github.io/K-Renov/",
+    "image": "https://isotron44-lang.github.io/K-Renov/assets/hero.jpg?v=20261011d",
+    "telephone": "+33766997054",
+    "email": "isotron44@gmail.com",
+    "priceRange": "45 € / heure",
+    "address": { "@type": "PostalAddress", "addressLocality": "Clamart", "postalCode": "92140", "addressCountry": "FR" },
+    "areaServed": ["Clamart", "Meudon", "Issy-les-Moulineaux", "Châtillon", "Vanves", "Vélizy-Villacoublay", "Massy", "Paris"]
   }
-}
-:root[data-theme="dark"] {
-  --plaster: #0f1726; --sheet: #162036; --ink: #e8edf5; --bleu: #7fa6ef; --navy: #2b4a74; --accent-text: #e8834f;
-  --ochre: #e8834f; --muted: #9aa6ba; --grid: rgba(127, 166, 239, .07); --line: rgba(232, 237, 245, .14);
-  color-scheme: dark;
-}
-
-* { box-sizing: border-box; }
-html, body { min-height: 100%; }
-body {
-  margin: 0;
-  background-color: var(--plaster);
-  background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 24px 24px;
-  color: var(--ink);
-  font: 400 1rem/1.6 var(--font-body);
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: clamp(24px, 6vw, 72px);
-  display: flex;
-  justify-content: center;
-}
-.page { width: 100%; max-width: 760px; display: flex; flex-direction: column; gap: clamp(32px, 6vw, 56px); }
-
-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-.logo svg { width: 44px; height: 44px; flex: none; }
-.logo b { font: 800 1.35rem/1 var(--font-display); letter-spacing: -.01em; }
-.logo b span { color: var(--accent-text); }
-.stamp {
-  font: 500 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .12em;
-  color: var(--ink); border: 1.5px solid currentColor; border-radius: 4px; padding: 8px 10px;
-  transform: rotate(-2deg);
-}
-
-.hero { display: flex; flex-direction: column; gap: 20px; }
-.eyebrow { font: 500 .78rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .14em; color: var(--muted); }
-h1 {
-  margin: 0; font: 800 clamp(2.3rem, 7.5vw, 4.2rem)/1 var(--font-display);
-  letter-spacing: -.035em; text-wrap: balance;
-}
-h1 em { font-style: normal; color: var(--accent-text); }
-.lead { margin: 0; max-width: 34em; font-size: clamp(1.02rem, 2.4vw, 1.15rem); color: var(--muted); }
-
-/* Mètre ruban */
-.tape { display: flex; flex-direction: column; gap: 10px; }
-.tape-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font: 500 .8rem/1 var(--font-mono); color: var(--muted); }
-.tape-head strong { color: var(--ink); font-size: 1rem; font-variant-numeric: tabular-nums; }
-.tape-body {
-  position: relative; height: 46px; border-radius: 6px; overflow: hidden;
-  background: var(--sheet); border: 1px solid var(--line);
-}
-.tape-fill {
-  position: absolute; inset: 0 auto 0 0; width: 72%;
-  background-color: var(--ochre);
-  background-image:
-    repeating-linear-gradient(90deg, rgba(22,35,58,.7) 0 1px, transparent 1px 10px),
-    repeating-linear-gradient(90deg, rgba(22,35,58,.85) 0 2px, transparent 2px 50px);
-  background-size: 100% 12px, 100% 22px;
-  background-repeat: no-repeat;
-  background-position: 0 0, 0 0;
-  animation: unroll 1.6s cubic-bezier(.2,.8,.2,1) both;
-  transform-origin: left;
-}
-.tape-fill::after {
-  content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 8px;
-  background: var(--ink); border-radius: 0 2px 2px 0;
-}
-.tape-nums {
-  position: absolute; inset: auto 0 6px 0; display: flex; justify-content: space-between;
-  padding-inline: 6px; font: 500 .62rem/1 var(--font-mono); color: var(--muted);
-  pointer-events: none; font-variant-numeric: tabular-nums;
-}
-@keyframes unroll { from { transform: scaleX(.05); } to { transform: scaleX(1); } }
-
-.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-.service { background: var(--sheet); padding: 20px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-.service .ref { font: 500 .7rem/1 var(--font-mono); color: var(--accent-text); letter-spacing: .08em; }
-.service h2 { margin: 0; font: 800 1.12rem/1.2 var(--font-display); }
-.service p { margin: 0; font-size: .92rem; color: var(--muted); }
-
-.contact { display: flex; flex-direction: column; gap: 14px; }
-.contact h2 { margin: 0; font: 800 clamp(1.4rem, 4vw, 1.8rem)/1.1 var(--font-display); text-wrap: balance; }
-.rows { display: flex; flex-wrap: wrap; gap: 12px; }
-.row {
-  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
-  background: var(--sheet); border: 1px solid var(--line); border-radius: 8px; min-width: 0;
-}
-.row .k { font: 500 .7rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
-.row .v { font-weight: 600; user-select: all; overflow-wrap: anywhere; }
-.row.wa { text-decoration: none; color: inherit; }
-.row.wa .v { color: var(--bleu); user-select: auto; }
-.row.wa:hover { border-color: var(--bleu); }
-.row.wa:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
-.row button {
-  font: 600 .8rem/1 var(--font-body); color: var(--bleu); background: transparent;
-  border: 1px solid currentColor; border-radius: 999px; padding: 6px 10px; cursor: pointer;
-}
-.row button:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
-
-footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px dashed var(--line); padding-top: 18px; font: 500 .75rem/1.4 var(--font-mono); color: var(--muted); }
-
-@media (max-width: 560px) {
-  .services { grid-template-columns: 1fr; }
-  .row { flex: 1 1 100%; }
-}
-@media (prefers-reduced-motion: reduce) { .tape-fill { animation: none; } }
-</style>
+  </script>
 </head>
 <body>
-
-<div class="page">
-  <header>
-    <a class="logo" href="#" aria-label="KVH Rénov">
-      <svg viewBox="0 0 44 44" aria-hidden="true">
-        <rect x="1" y="1" width="42" height="42" rx="8" fill="var(--navy)"/>
-        <path d="M10 23 L22 12 L34 23" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M14 21 V33 H30 V21" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linejoin="round"/>
-        <rect x="19.5" y="25" width="5" height="8" fill="var(--ochre)"/>
-      </svg>
-      <b>KVH <span>Rénov</span></b>
-    </a>
-    <div class="stamp">Chantier en cours</div>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="topbar">Clamart • Hauts-de-Seine • Sud &amp; Ouest parisien · <a href="tel:+33766997054">07 66 99 70 54</a></div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="index.html"><span class="brand-mark">KVH</span><span>KVH Rénov<small>Rénovation &amp; Finitions</small></span></a>
+      <button class="mobile-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-menu">☰</button>
+      <div class="menu" id="main-menu">
+        <a href="#services">Petits travaux</a>
+        <a href="prestations.html">Finitions &amp; projets</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#zone">Zone</a>
+        <a class="btn" href="#contact">Demander un devis</a>
+      </div>
+    </nav>
   </header>
+  <main id="contenu">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Homme toutes mains · Clamart &amp; Sud-Ouest Parisien</span>
+          <h1>Les petits travaux, enfin bien faits.</h1>
+          <p class="lead">Montage de mobilier, fixations murales, ajustements soignés et menues réparations à Clamart et dans les communes voisines. Une réponse claire, un créneau convenu, un travail soigné — et le prix annoncé avant de venir.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Demander un devis →</a>
+            <a class="btn secondary" href="tel:+33766997054"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>07 66 99 70 54</a>
+          </div>
+          <div class="trust"><span>Prix annoncé avant de venir</span><span>Chantier protégé &amp; nettoyé</span><span>Interlocuteur unique</span></div>
+          <p style="font-size:0.75rem;opacity:0.7;margin-top:10px;">Photos de l'artisan recréées numériquement (IA) à partir de photos réelles, à titre illustratif.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo-wrap">
+            <img src="assets/hero.jpg?v=20261011d" alt="Artisan homme toutes mains vu de dos ajustant un meuble haut dans une cuisine parisienne" width="1600" height="900" fetchpriority="high">
+            <div class="hero-badge">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <div><b>45 €/h</b><span>Tarif clair, sans surprise (min. 1h)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="hero">
-    <div class="eyebrow">Rénovation &amp; finitions · Clamart</div>
-    <h1>Les petits travaux, enfin bien faits. Le site, <em>bientôt</em>.</h1>
-    <p class="lead">On prend les mesures et on soigne les finitions de notre nouveau site. KVH Rénov intervient pour vos petits travaux à Clamart, dans les Hauts-de-Seine et le sud-ouest parisien.</p>
-  </section>
+    <section class="section white" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Petit bricolage</span><h2>Une seule personne.<br>Plusieurs petits besoins.</h2></div>
+          <p>Idéal pour regrouper les tâches qui s'accumulent à la maison, avec une intervention organisée et sans mauvaise surprise.</p>
+        </div>
+        <div class="grid">
+          <article class="card reveal">
+            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v3H3z"/><path d="M6 10v4M18 10v4"/><circle cx="6" cy="17" r="1.6"/><circle cx="18" cy="17" r="1.6"/><path d="M9 4h6"/></svg></span>
+            <h3>Fixer &amp; installer</h3><p>Étagères, tringles à rideaux, cadres, miroirs, patères, luminaires sur douilles existantes et petits équipements.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span>
+            <h3>Monter &amp; ajuster</h3><p>Meubles en kit (armoires, lits, commodes, tables), réglage de charnières, poignées de portes et petites adaptations.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="14" height="6" rx="1.5"/><path d="M17 6h3v5h-9v3"/><rect x="9" y="14" width="4" height="7" rx="1"/></svg></span>
+            <h3>Entretenir &amp; réparer</h3><p>Joints silicone d'étanchéité (évier, douche), retouches d'enduit et peinture, remplacement de mécanismes sanitaires simples.</p>
+          </article>
+        </div>
 
-  <section class="tape" aria-label="Avancement du site">
-    <div class="tape-head"><span>Avancement</span><strong>72&nbsp;%</strong></div>
-    <div class="tape-body">
-      <div class="tape-fill"></div>
-      <div class="tape-nums" aria-hidden="true"><span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span></div>
+        <!-- Passerelle Grands Chantiers & Partenaire Décennale -->
+        <div class="reveal" style="margin-top: 36px; padding: 26px 30px; border-radius: 20px; background: linear-gradient(135deg, #10243c 0%, #1c3b5c 100%); color: #fff; box-shadow: 0 10px 30px rgba(16,36,60,0.15);">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+            <div style="max-width: 680px;">
+              <span style="display: inline-block; background: #d86c3a; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
+                Passerelle Rénovation Lourde &bull; Partenaire Décennale
+              </span>
+              <h3 style="margin: 0 0 8px; font-size: 1.35rem; color: #fff; line-height: 1.2;">Votre projet dépasse le cadre du petit bricolage ?</h3>
+              <p style="margin: 0; color: #cbd6de; font-size: 0.92rem; line-height: 1.55;">
+                Pour les chantiers de rénovation complète d'appartement, réfection totale de salle de bains, plomberie lourde, électricité générale ou isolation thermique : KVH Rénov qualifie votre besoin et vous met en relation directe avec notre <strong>entreprise générale partenaire certifiée &amp; assurée décennale</strong>.
+              </p>
+            </div>
+            <a class="btn" href="#contact" onclick="selectGrosTravaux()" style="white-space: nowrap; background: #d86c3a; color: #fff; border: 0; align-self: center;">
+              Demander un grand chantier →
+            </a>
+          </div>
+          <div style="font-size: 0.8rem; color: #9bb0c2; border-top: 1px solid rgba(255,255,255,0.12); margin-top: 16px; padding-top: 12px; display: flex; flex-wrap: wrap; gap: 15px;">
+            <span>✓ <strong>Petits travaux</strong> : Intervention directe KVH Rénov</span>
+            <span>✓ <strong>Gros chantiers</strong> : Entreprise générale partenaire (KVH Rénov agit en simple intermédiaire sans engager sa responsabilité décennale ni contractuelle)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="comment">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Comment ça marche</span><h2>Trois étapes, pas de surprise.</h2></div>
+          <p>Vous savez ce qui sera fait et combien cela coûte avant que je me déplace.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><b>1</b><h3>Vous décrivez le besoin</h3><p>Par téléphone, WhatsApp ou le formulaire, avec quelques photos et votre ville.</p></li>
+          <li class="reveal"><b>2</b><h3>Je vous annonce le prix</h3><p>Durée estimée, déplacement et fournitures éventuelles. Vous validez ou non, sans engagement.</p></li>
+          <li class="reveal"><b>3</b><h3>J'interviens proprement</h3><p>Au créneau convenu, avec protection des sols et remise en ordre de la zone.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section white">
+      <div class="container feature">
+        <div class="feature-img reveal"><img src="assets/artisan_meuble_dos.jpg?v=20261011d" alt="Artisan homme toutes mains vu de dos ajustant un meuble en bois sur bâche de protection" width="1600" height="900" loading="lazy"></div>
+        <div class="reveal">
+          <span class="eyebrow">Prestations soignées</span>
+          <h2>Des finitions &amp; aménagements sur mesure.</h2>
+          <p class="lead">Pour un meuble complexe à monter, des étagères à poser au niveau, un joint silicone à refaire à neuf ou plusieurs petites réparations à regrouper, l'intervention est planifiée avec soin.</p>
+          <div class="service-list"><span>Montage &amp; ajustements</span><span>Fixations &amp; rangements</span><span>Retouches de peinture</span><span>Joints &amp; menues reprises</span></div>
+          <div class="hero-actions"><a class="btn" href="prestations.html">Découvrir les prestations →</a></div>
+          <div class="legal-note" style="border-left-color: #10243c; background: #f0f4f8; color: #213547;">
+            <strong>Périmètre légal strict :</strong> KVH Rénov réalise en direct les petits travaux d'homme toutes mains sans impact structurel. Tout chantier nécessitant une assurance décennale obligatoire (gros œuvre, salle de bain complète, tableaux électriques) est orienté vers notre entreprise générale partenaire qualifiée.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="realisations">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Réalisations</span><h2>Des interventions soignées,<br>réalisées avec précision.</h2></div>
+          <p>Montage de mobilier, tasseaux décoratifs, sanitaires légers et fixations : découvrez nos réalisations concrètes à Clamart et en Île-de-France.</p>
+        </div>
+        <div class="portfolio-preview">
+          <a class="preview-project reveal" href="realisations.html#habillage-tasseaux">
+            <img src="assets/realisations/tasseaux-bois.jpg?v=20261011e" alt="Habillage mural décoratif en tasseaux de chêne et console suspendue" loading="lazy">
+            <span><small>Agencement &amp; Décoration</small><strong>Habillage en tasseaux &amp; console suspendue</strong></span>
+          </a>
+          <a class="preview-project reveal" href="realisations.html#meuble-vasque">
+            <img src="assets/realisations/meuble-vasque.jpg?v=20261011e" alt="Pose de meuble vasque suspendu et miroir LED rétroéclairé" loading="lazy">
+            <span><small>Sanitaire léger &amp; Pose</small><strong>Meuble vasque suspendu &amp; miroir LED</strong></span>
+          </a>
+          <a class="preview-project reveal" href="realisations.html#dressing-kit">
+            <img src="assets/realisations/dressing-sur-mesure.jpg?v=20261011e" alt="Montage soigné d'un dressing modulaire en kit sous pente" loading="lazy">
+            <span><small>Montage mobilier</small><strong>Dressing modulaire &amp; rangements en kit</strong></span>
+          </a>
+        </div>
+        <div class="portfolio-more reveal"><a class="btn" href="realisations.html">Découvrir les 5 réalisations soignées →</a></div>
+        <p style="text-align:center;font-size:0.8rem;color:#64748b;margin-top:14px;">Visuels retouchés ou recréés numériquement (IA) à partir de nos chantiers, à titre illustratif.</p>
+      </div>
+    </section>
+
+    <section class="section white" id="engagements">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Mes engagements</span><h2>Ce que vous pouvez attendre.</h2></div>
+          <p>Un artisan qui intervient chez vous, c'est avant tout une question de confiance.</p>
+        </div>
+        <div class="promises">
+          <div class="reveal"><h3>Un prix clair</h3><p>Annoncé avant de venir, confirmé par écrit. Les fournitures et le déplacement sont indiqués à part.</p></div>
+          <div class="reveal"><h3>La ponctualité</h3><p>Un créneau convenu ensemble. En cas d'imprévu, vous êtes prévenu à l'avance.</p></div>
+          <div class="reveal"><h3>Un chantier propre</h3><p>Protection des sols et des meubles, gravats et emballages emportés.</p></div>
+          <div class="reveal"><h3>La franchise</h3><p>Si une demande dépasse mon activité ou mes assurances, je vous le dis et je vous oriente.</p></div>
+        </div>
+        <!-- Avis clients : à ajouter ici dès les premiers avis Google (texte réel, prénom, ville, date). -->
+      </div>
+    </section>
+
+    <section class="section" id="tarifs">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Tarifs indicatifs</span><h2>Un prix simple, annoncé avant de venir.</h2></div>
+          <p>Pour le petit bricolage courant. Après réception des photos et de l'adresse, le montant est confirmé avant toute intervention.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <small>Main-d'œuvre</small>
+            <strong>45 €<em>/ heure</em></strong>
+            <p>Minimum de facturation : 1 heure. Puis calcul par tranche de 30 minutes.</p>
+          </article>
+          <article class="pricing-card featured reveal">
+            <span class="pricing-badge">Le plus demandé</span>
+            <small>Demi-journée</small>
+            <strong>170 €<em>/ 4 heures</em></strong>
+            <p>Idéal pour regrouper montage, fixations et petites réparations.</p>
+          </article>
+          <article class="pricing-card reveal">
+            <small>Journée</small>
+            <strong>290 €<em>/ 7 heures</em></strong>
+            <p>Pour plusieurs tâches ou un aménagement intérieur plus complet.</p>
+          </article>
+        </div>
+
+        <div class="travel-box reveal">
+          <div class="travel-intro"><span class="eyebrow">Déplacement depuis Clamart</span><h3>Selon la distance réelle</h3></div>
+          <div class="travel-rates">
+            <div><b>15 €</b><span>Clamart et jusqu'à 10 km</span></div>
+            <div><b>25 €</b><span>de 10 à 20 km</span></div>
+            <div><b>30 €</b><span>Paris intra-muros</span></div>
+          </div>
+        </div>
+
+        <div class="pricing-notes reveal">
+          <p><strong>Stationnement et péages :</strong> ajoutés au montant réel, sur justificatif.</p>
+          <p><strong>Fournitures :</strong> non comprises, sauf mention contraire sur le devis.</p>
+          <p><strong>Travaux techniques ou finitions :</strong> prix sur devis selon la nature du support et la prestation.</p>
+        </div>
+        <p class="price-legal">Prix en euros TTC.</p>
+      </div>
+    </section>
+
+    <section class="section white" id="zone">
+      <div class="container">
+        <div class="zone reveal">
+          <div><span class="eyebrow">Zone d'intervention</span><h3>Clamart + secteur proche</h3><p>Déplacements adaptés à la durée et à la nature de l'intervention.</p></div>
+          <div class="zone-tags"><span class="tag">Clamart</span><span class="tag">Meudon</span><span class="tag">Issy</span><span class="tag">Châtillon</span><span class="tag">Vanves</span><span class="tag">Vélizy</span><span class="tag">Massy</span><span class="tag">Paris sud</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="contact">
+      <div class="container contact">
+        <div>
+          <span class="eyebrow">Demande de devis</span>
+          <h2>Expliquez votre besoin.</h2>
+          <p>Le plus rapide : un appel ou quelques photos par WhatsApp, avec votre ville et les dimensions utiles. Vous recevez une première réponse sur la faisabilité et le tarif.</p>
+          <div class="contact-actions">
+            <a class="btn light" href="tel:+33766997054"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>07 66 99 70 54</a>
+            <a class="btn whatsapp" href="https://wa.me/33766997054?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-.9-.8.7a4 4 0 0 1-2.4-2.4l.7-.8-.9-1.8z"/></svg>Envoyer des photos sur WhatsApp</a>
+          </div>
+          <p class="contact-mail">Ou par e-mail : <a href="mailto:isotron44@gmail.com">isotron44@gmail.com</a></p>
+          <div class="legal-note">Réponse indicative avant vérification sur place. Le devis final précise la prestation, les fournitures, les frais éventuels et le délai.</div>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/xwlpwlkz" method="POST" novalidate>
+          <input type="hidden" name="_subject" id="form-subject" value="Demande de devis — KVH Rénov">
+          <input type="hidden" name="formulaire" value="KVH Rénov">
+          <input type="hidden" name="type_projet_libelle" id="type_projet_libelle" value="Petit bricolage & Finitions (Intervention directe KVH Rénov)">
+
+          <label>Type d'intervention
+            <select name="type_chantier" id="type_chantier" style="width: 100%; padding: 14px 16px; border: 1px solid #bbc4ca; border-radius: 12px; background: #fff; font-weight: 600; color: #10243c; font-size: 0.95rem;">
+              <option value="petit_bricolage">🔧 Petits travaux & Bricolage (Intervention directe KVH Rénov)</option>
+              <option value="renovation_lourde">🏢 Rénovation complète / Salle de bain / Gros travaux (Partenaire Décennale)</option>
+            </select>
+          </label>
+
+          <div id="notice-partenaire" style="display: none; background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #10243c; padding: 14px 16px; border-radius: 0 12px 12px 0; font-size: 0.83rem; color: #1e293b; line-height: 1.5;">
+            <p style="margin: 0 0 6px; font-weight: bold; color: #0f172a;">🏢 Mise en relation avec notre entreprise partenaire :</p>
+            <p style="margin: 0 0 6px;">Ce chantier nécessite une garantie décennale obligatoire. KVH Rénov qualifie votre besoin et transmet votre dossier à son entreprise générale partenaire qui prendra contact avec vous.</p>
+            <p style="margin: 0; font-size: 0.77rem; color: #64748b; line-height: 1.45; border-top: 1px dashed #cbd5e1; padding-top: 6px;">
+              <strong>Mention légale :</strong> Pour les gros travaux, KVH Rénov intervient exclusivement en tant qu'intermédiaire indépendant et n'est pas partie au contrat de chantier. Les devis, la garantie décennale et l'entière responsabilité des travaux incombent exclusivement à l'entreprise partenaire exécutante.
+            </p>
+          </div>
+
+          <label>Nom<input name="nom" required autocomplete="name"></label>
+          <label>Téléphone<input name="telephone" type="tel" required autocomplete="tel" placeholder="Pour vous rappeler"></label>
+          <label>Ville<input name="ville" required autocomplete="address-level2"></label>
+          <label>Votre besoin<textarea name="message" id="form-message" required placeholder="Ex. montage d'un meuble, fixation de 3 étagères… ou rénovation complète de salle de bain"></textarea></label>
+          <div class="hp" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+          <button class="btn" type="submit" id="btn-submit">Envoyer ma demande →</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-hint">Vos coordonnées servent uniquement à répondre à votre demande. Pour les photos, utilisez WhatsApp ou répondez à mon message.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="index.html"><span class="brand-mark">KVH</span><span>KVH Rénov</span></a><p>Petits travaux de bricolage, montage de meubles, finitions intérieures et dépannage à domicile à Clamart et en Île-de-France. Mise en relation certifiée pour vos gros projets.</p><p><a href="tel:+33766997054">07 66 99 70 54</a></p></div>
+      <div><strong>Navigation</strong><p><a href="#services">Petits travaux</a><br><a href="prestations.html">Finitions &amp; projets</a><br><a href="realisations.html">Réalisations</a><br><a href="#contact">Contact</a></p></div>
+      <div><strong>Informations</strong><p><a href="mentions.html">Mentions légales</a><br><a href="mentions.html#cadre">Cadre des prestations</a></p></div>
     </div>
-  </section>
-
-  <section class="services" aria-label="Nos métiers">
-    <div class="service"><span class="ref">LOT 01</span><h2>Petit bricolage</h2><p>Étagères, tringles, miroirs, luminaires : fixations et poses.</p></div>
-    <div class="service"><span class="ref">LOT 02</span><h2>Montage de meubles</h2><p>Meubles en kit, réglages de charnières et poignées.</p></div>
-    <div class="service"><span class="ref">LOT 03</span><h2>Finitions</h2><p>Retouches de peinture et d’enduit, joints silicone, menues reprises.</p></div>
-    <div class="service"><span class="ref">LOT 04</span><h2>Aménagements</h2><p>Habillage en tasseaux, meuble vasque suspendu, dressing modulable.</p></div>
-  </section>
-
-  <footer>
-    <span>© 2026 KVH Rénov · Karen V. (EI) · SIRET : 131 352 700 00010</span>
-    <span>Main-d’œuvre 45 €/h · RNE n° J00290098094 · <a href="mentions.html" style="color:inherit;text-decoration:underline;">Mentions</a></span>
+    <div class="container" style="margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.75rem;font-size:0.8rem;color:#92a5b5;">
+      <span>© 2026 KVH Rénov. Exploité par Karen V. (EI) — SIRET : 131 352 700 00010 — Dépôt officiel RNE n° J00290098094.</span>
+      <span>Conception web : <a href="https://kvh-studio.fr" target="_blank" rel="noopener noreferrer" style="color:#d86c3a;text-decoration:underline;font-weight:bold;">KVH STUDIO</a> • Contenus éditoriaux : <strong style="color:#fff;">KVH ÉDITION</strong> • Partenaire : <a href="https://dpe-clair.fr" target="_blank" rel="noopener" style="color:#d86c3a;text-decoration:underline;">DPE Clair</a></span>
+    </div>
   </footer>
-</div>
-
+  <div class="call-bar" aria-label="Contact rapide">
+    <a href="tel:+33766997054">Appeler</a>
+    <a href="https://wa.me/33766997054?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
