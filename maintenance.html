@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10243c">
+<title>KVH Rénov</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="KVH Rénov, petits travaux et finitions à Clamart et dans le sud-ouest parisien. Notre nouveau site arrive bientôt.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: plan d'architecte sur papier quadrillé, colonne unique, un mètre ruban comme jauge d'avancement */
+:root {
+  --plaster: #f7f4ef;       /* fond papier du site KVH */
+  --sheet: #ffffff;
+  --ink: #10243c;           /* bleu marine KVH (couleur du site actuel) */
+  --bleu: #183752;          /* bleu marine secondaire du site */
+  --navy: #10243c;
+  --accent-text: #b84d24;
+  --ochre: #d86c3a;         /* orange KVH, accent du site */
+  --muted: #607080;
+  --grid: rgba(16, 36, 60, .06);
+  --line: #d9d5ce;
+  --font-display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --plaster: #0f1726; --sheet: #162036; --ink: #e8edf5; --bleu: #7fa6ef; --navy: #2b4a74; --accent-text: #e8834f;
+    --ochre: #e8834f; --muted: #9aa6ba; --grid: rgba(127, 166, 239, .07); --line: rgba(232, 237, 245, .14);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --plaster: #0f1726; --sheet: #162036; --ink: #e8edf5; --bleu: #7fa6ef; --navy: #2b4a74; --accent-text: #e8834f;
+  --ochre: #e8834f; --muted: #9aa6ba; --grid: rgba(127, 166, 239, .07); --line: rgba(232, 237, 245, .14);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  background-color: var(--plaster);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  font: 400 1rem/1.6 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: clamp(24px, 6vw, 72px);
+  display: flex;
+  justify-content: center;
+}
+.page { width: 100%; max-width: 760px; display: flex; flex-direction: column; gap: clamp(32px, 6vw, 56px); }
+
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.logo svg { width: 44px; height: 44px; flex: none; }
+.logo b { font: 800 1.35rem/1 var(--font-display); letter-spacing: -.01em; }
+.logo b span { color: var(--accent-text); }
+.stamp {
+  font: 500 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .12em;
+  color: var(--ink); border: 1.5px solid currentColor; border-radius: 4px; padding: 8px 10px;
+  transform: rotate(-2deg);
+}
+
+.hero { display: flex; flex-direction: column; gap: 20px; }
+.eyebrow { font: 500 .78rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .14em; color: var(--muted); }
+h1 {
+  margin: 0; font: 800 clamp(2.3rem, 7.5vw, 4.2rem)/1 var(--font-display);
+  letter-spacing: -.035em; text-wrap: balance;
+}
+h1 em { font-style: normal; color: var(--accent-text); }
+.lead { margin: 0; max-width: 34em; font-size: clamp(1.02rem, 2.4vw, 1.15rem); color: var(--muted); }
+
+/* Mètre ruban */
+.tape { display: flex; flex-direction: column; gap: 10px; }
+.tape-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font: 500 .8rem/1 var(--font-mono); color: var(--muted); }
+.tape-head strong { color: var(--ink); font-size: 1rem; font-variant-numeric: tabular-nums; }
+.tape-body {
+  position: relative; height: 46px; border-radius: 6px; overflow: hidden;
+  background: var(--sheet); border: 1px solid var(--line);
+}
+.tape-fill {
+  position: absolute; inset: 0 auto 0 0; width: 72%;
+  background-color: var(--ochre);
+  background-image:
+    repeating-linear-gradient(90deg, rgba(22,35,58,.7) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(90deg, rgba(22,35,58,.85) 0 2px, transparent 2px 50px);
+  background-size: 100% 12px, 100% 22px;
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0;
+  animation: unroll 1.6s cubic-bezier(.2,.8,.2,1) both;
+  transform-origin: left;
+}
+.tape-fill::after {
+  content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 8px;
+  background: var(--ink); border-radius: 0 2px 2px 0;
+}
+.tape-nums {
+  position: absolute; inset: auto 0 6px 0; display: flex; justify-content: space-between;
+  padding-inline: 6px; font: 500 .62rem/1 var(--font-mono); color: var(--muted);
+  pointer-events: none; font-variant-numeric: tabular-nums;
+}
+@keyframes unroll { from { transform: scaleX(.05); } to { transform: scaleX(1); } }
+
+.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.service { background: var(--sheet); padding: 20px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.service .ref { font: 500 .7rem/1 var(--font-mono); color: var(--accent-text); letter-spacing: .08em; }
+.service h2 { margin: 0; font: 800 1.12rem/1.2 var(--font-display); }
+.service p { margin: 0; font-size: .92rem; color: var(--muted); }
+
+.contact { display: flex; flex-direction: column; gap: 14px; }
+.contact h2 { margin: 0; font: 800 clamp(1.4rem, 4vw, 1.8rem)/1.1 var(--font-display); text-wrap: balance; }
+.rows { display: flex; flex-wrap: wrap; gap: 12px; }
+.row {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+  background: var(--sheet); border: 1px solid var(--line); border-radius: 8px; min-width: 0;
+}
+.row .k { font: 500 .7rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.row .v { font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+.row.wa { text-decoration: none; color: inherit; }
+.row.wa .v { color: var(--bleu); user-select: auto; }
+.row.wa:hover { border-color: var(--bleu); }
+.row.wa:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
+.row button {
+  font: 600 .8rem/1 var(--font-body); color: var(--bleu); background: transparent;
+  border: 1px solid currentColor; border-radius: 999px; padding: 6px 10px; cursor: pointer;
+}
+.row button:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
+
+footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px dashed var(--line); padding-top: 18px; font: 500 .75rem/1.4 var(--font-mono); color: var(--muted); }
+
+@media (max-width: 560px) {
+  .services { grid-template-columns: 1fr; }
+  .row { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .tape-fill { animation: none; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <a class="logo" href="#" aria-label="KVH Rénov">
+      <svg viewBox="0 0 44 44" aria-hidden="true">
+        <rect x="1" y="1" width="42" height="42" rx="8" fill="var(--navy)"/>
+        <path d="M10 23 L22 12 L34 23" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 21 V33 H30 V21" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linejoin="round"/>
+        <rect x="19.5" y="25" width="5" height="8" fill="var(--ochre)"/>
+      </svg>
+      <b>KVH <span>Rénov</span></b>
+    </a>
+    <div class="stamp">Chantier en cours</div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Rénovation &amp; finitions · Clamart</div>
+    <h1>Les petits travaux, enfin bien faits. Le site, <em>bientôt</em>.</h1>
+    <p class="lead">On prend les mesures et on soigne les finitions de notre nouveau site. KVH Rénov intervient pour vos petits travaux à Clamart, dans les Hauts-de-Seine et le sud-ouest parisien.</p>
+  </section>
+
+  <section class="tape" aria-label="Avancement du site">
+    <div class="tape-head"><span>Avancement</span><strong>72&nbsp;%</strong></div>
+    <div class="tape-body">
+      <div class="tape-fill"></div>
+      <div class="tape-nums" aria-hidden="true"><span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span></div>
+    </div>
+  </section>
+
+  <section class="services" aria-label="Nos métiers">
+    <div class="service"><span class="ref">LOT 01</span><h2>Petit bricolage</h2><p>Étagères, tringles, miroirs, luminaires : fixations et poses.</p></div>
+    <div class="service"><span class="ref">LOT 02</span><h2>Montage de meubles</h2><p>Meubles en kit, réglages de charnières et poignées.</p></div>
+    <div class="service"><span class="ref">LOT 03</span><h2>Finitions</h2><p>Retouches de peinture et d’enduit, joints silicone, menues reprises.</p></div>
+    <div class="service"><span class="ref">LOT 04</span><h2>Aménagements</h2><p>Habillage en tasseaux, meuble vasque suspendu, dressing modulable.</p></div>
+  </section>
+
+  <footer>
+    <span>© 2026 KVH Rénov · Karen V. (EI) · SIRET : 131 352 700 00010</span>
+    <span>Main-d’œuvre 45 €/h · RNE n° J00290098094 · <a href="mentions.html" style="color:inherit;text-decoration:underline;">Mentions</a></span>
+  </footer>
+</div>
+
+</body>
+</html>
